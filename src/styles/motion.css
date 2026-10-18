@@ -36,13 +36,24 @@
   .motion .how5 li{z-index:1}
 }
 
-/* 6. Header becomes a solid bar once you scroll past the top */
-@keyframes slide-down{from{transform:translateY(-100%)}to{transform:none}}
-.site-header.is-stuck{position:fixed;background:rgba(11,34,50,.97);box-shadow:0 10px 30px rgba(8,14,26,.18);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.motion .site-header.is-stuck{animation:slide-down .45s var(--ease-out)}
-.site-header.is-stuck .bar{padding-top:12px;padding-bottom:12px}
-.site-header.is-stuck .brand img{width:38px}
-[id]{scroll-margin-top:96px}
+/* 6. Header floats as a rounded, frosted bar once you scroll past the top */
+@keyframes float-in{from{opacity:0;transform:translateY(-120%)}to{opacity:1;transform:none}}
+.site-header.is-stuck{position:fixed;top:14px;left:0;right:0;width:min(1320px,calc(100% - 32px));margin:0 auto;
+  background:rgba(11,34,50,.82);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
+  border:1px solid rgba(255,255,255,.1);border-radius:999px;box-shadow:0 18px 40px rgba(8,14,26,.28);overflow:hidden}
+.motion .site-header.is-stuck{animation:float-in .5s var(--ease-out)}
+.site-header.is-stuck .bar{padding:10px 10px 10px 26px;max-width:none}
+.site-header.is-stuck .brand img{width:34px}
+.site-header.is-stuck .header-cta{padding-top:12px;padding-bottom:12px}
+/* With the Services menu open, the bar becomes a rounded panel */
+.site-header.is-stuck:has(.mega.is-open){border-radius:24px;background:rgba(11,34,50,.97)}
+.site-header.is-stuck .mega{background:transparent;box-shadow:none}
+.site-header.is-stuck .mega .wrap{max-width:none;padding-left:26px;padding-right:26px}
+@media (max-width:760px){
+  .site-header.is-stuck{top:10px;width:calc(100% - 20px)}
+  .site-header.is-stuck .bar{padding:8px 8px 8px 18px}
+}
+[id]{scroll-margin-top:100px}
 
 /* 7. Hover touches */
 .card,.img-card,.svc-card{transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out)}
