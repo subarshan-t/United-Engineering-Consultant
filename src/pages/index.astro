@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactBlock from '../components/ContactBlock.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+import { reviews } from '../data/reviews';
 import ArrowLink from '../components/ArrowLink.astro';
 import Icon from '../components/Icon.astro';
 import Licence from '../components/Licence.astro';
@@ -288,8 +290,10 @@ import Placeholder from '../components/Placeholder.astro';
       </div>
       <div class="testi">
         <div class="eyebrow">REVIEWS</div>
-        <h2 class="serif h2-lg"><em>What our clients say</em></h2>
-        <p class="note"><Placeholder>[CLIENT TESTIMONIALS: 2 to 3 genuine reviews with first name and suburb, e.g. from Google reviews. Do not publish placeholder or invented testimonials.]</Placeholder></p>
+        <h2 class="serif h2-lg">What our clients say</h2>
+        <div class="reviews">
+          {reviews.map((review) => <ReviewCard review={review} />)}
+        </div>
       </div>
     </div>
   </section>

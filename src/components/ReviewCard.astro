@@ -1,0 +1,23 @@
+---
+import type { Review } from '../data/reviews';
+
+interface Props {
+  review: Review;
+}
+
+const { review } = Astro.props;
+const initial = review.name.trim().charAt(0).toUpperCase();
+---
+<figure class="review">
+  <div class="review-stars" role="img" aria-label={`Rated ${review.rating} out of 5`}>
+    {Array.from({ length: 5 }, (_, i) => <span class:list={{ off: i >= review.rating }} aria-hidden="true">★</span>)}
+  </div>
+  <blockquote class="review-quote"><p>“{review.quote}”</p></blockquote>
+  <figcaption class="review-by">
+    <span class="review-avatar" aria-hidden="true">{initial}</span>
+    <span>
+      <strong>{review.name}</strong>
+      {review.url ? <a href={review.url} target="_blank" rel="noopener">{review.source}</a> : <small>{review.source}</small>}
+    </span>
+  </figcaption>
+</figure>
