@@ -21,7 +21,7 @@ const { title } = Astro.props;
         {site.phone ? <a href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a> : <span><Placeholder>{placeholders.phone}</Placeholder></span>}
       </li>
       <li><Icon name="mail" /><a href={`mailto:${site.email}`}>{site.email}</a></li>
-      <li><Icon name="pin" /><span>{site.location}</span></li>
+      <li><Icon name="pin" /><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`} target="_blank" rel="noopener">{site.address}</a></li>
       <li><Icon name="clock" /><span>{site.hours}</span></li>
     </ul>
   </div>

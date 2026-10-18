@@ -2,9 +2,9 @@
 // Any value left as null renders as a highlighted placeholder until the client supplies it.
 export const site = {
   name: 'United Engineering Consultants',
-  phone: null as string | null, // e.g. '08 1234 5678'
-  email: 'enquiries@unitedengineering.com.au',
-  location: 'Adelaide, South Australia',
+  phone: '+61 435 338 017' as string | null,
+  email: 'admin@unitedengineers.com.au',
+  address: '1/41 Douglas Drive, Mawson Lakes, SA 5095',
   hours: 'Monday – Friday, 9:00am – 5:00pm',
   hoursShort: 'Mon – Fri, 9:00am – 5:00pm',
   licence: 'BLD 350766' as string | null, // Building Work Contractor's Licence

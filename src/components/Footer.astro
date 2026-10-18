@@ -27,7 +27,7 @@ const year = new Date().getFullYear();
         <span class="f-h">CONTACT</span>
         {site.phone ? <a href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a> : <span><Placeholder>{placeholders.phone}</Placeholder></span>}
         <a href={`mailto:${site.email}`}>{site.email}</a>
-        <span>{site.location}</span>
+        <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`} target="_blank" rel="noopener">{site.address}</a>
         <span>{site.hoursShort}</span>
       </div>
     </div>
