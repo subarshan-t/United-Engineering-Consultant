@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Custom Home Builders Adelaide | Unique Home Design"
+  description="Custom homes in Adelaide, designed from scratch around your lifestyle and your block, then engineered and built by the same team at UEC."
+>
+  <PageHero
+    title="Custom homes as individual as you are"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Projects', href: '/projects/' }]}
+    crumb="Custom Homes"
+    tabs="projects"
+  >
+    <p class="lead">Some people want a home nobody else has. A layout that suits exactly how they live, a design that responds to their block and details that feel personal. That’s what a custom home is, and it’s what we love building.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What makes a custom home different">
+    <p>A custom home is designed from a blank page. There’s no catalogue and no standard floor plan. Every room, window and finish is chosen for you and your site.</p>
+  </Section>
+
+  <Section num="02" title="Why custom works best with one team" alt>
+    <p>Custom homes often include things standard homes don’t: bigger spans, unusual shapes, more glass, split levels or challenging sites. These all need careful engineering.</p>
+    <p>When your designer, engineer and builder work together, you can be more ambitious with your design, because the structure is solved as the design develops.</p>
+  </Section>
+
+  <Section num="03" title="Your custom home journey">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Discover</h3>
+        <p>We learn how you live, what you love and what your site offers.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Design</h3>
+        <p>We shape your ideas into concept plans and 3D visuals until the home feels right.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Engineer</h3>
+        <p>We design the structure, footings and drainage to support your vision.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Approve</h3>
+        <p>We manage Planning Consent, Building Consent and Development Approval.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>Build</h3>
+        <p>We build your home and keep you informed every step of the way.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Custom home projects" alt>
+    <p><Placeholder>[PROJECT GALLERY: completed custom homes.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Is a custom home more expensive than a standard home?">
+        <p>It can be, depending on the design and finishes. We’ll talk openly about your budget from the start and design to it.</p>
+      </FaqItem>
+      <FaqItem question="Can I have input into every detail?">
+        <p>Yes. As much or as little as you like.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Design a home that’s truly yours">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

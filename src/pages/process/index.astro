@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Our Design & Build Process | UEC Adelaide"
+  description="See how UEC takes your Adelaide home from first conversation to handover, with a final quote based on detailed plans before you sign."
+>
+  <PageHero
+    title="From your first idea to the day you get the keys"
+    image="/images/s5.jpg"
+    crumb="Process"
+    tabs="process"
+  >
+    <p class="lead">Building a home is a big journey, and it’s easier when you know what’s coming. Our process is set out in clear steps, so you always know where you are, what’s next and what we need from you.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Our process at a glance">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>1. Initial consultation</h3>
+        <p>We listen to what you want to build and look at your site.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/initial-consultation/">Initial consultations</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>2. Fee proposal</h3>
+        <p>We set out the design and approvals work your project needs and what it costs.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/fee-proposal/">Fee proposal</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>3. Engagement agreement</h3>
+        <p>You engage us for design, engineering and approvals.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/engagement-agreement/">Engagement agreement</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>4. Final quote</h3>
+        <p>Once your plans are detailed, we give you a fixed price to build.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/final-quote/">Final quote</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>5. Agreement</h3>
+        <p>You sign your building contract.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/building-contract/">Agreement</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">06</span>
+        <h3>6. Processing</h3>
+        <p>Approvals are finalised and construction gets underway.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/processing/">Processing</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">07</span>
+        <h3>7. Pre-handover</h3>
+        <p>We inspect your home with you and fix anything that needs attention.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/pre-handover/">Pre handover</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">08</span>
+        <h3>8. Handover</h3>
+        <p>We hand over the keys to your new home.</p>
+        <div class="card-links">
+          <ArrowLink href="/process/handover/">Handover</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="Why we work in two stages" alt>
+    <p>We separate design from construction on purpose. First, we design, engineer and document your home. Then we price it. That means your final quote is based on detailed drawings, not a rough estimate, so you know your numbers before you sign a building contract.</p>
+  </Section>
+
+  <Section num="03" title="Staying in touch">
+    <p>You’ll have a main point of contact throughout your project. <Placeholder>[CLIENT TO CONFIRM: how and how often clients are updated, e.g. weekly update, client portal.]</Placeholder></p>
+  </Section>
+
+  <CtaBanner title="Ready to take the first step?">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

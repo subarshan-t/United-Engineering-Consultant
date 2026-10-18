@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Structural Plans & Drawings for Homes Adelaide | UEC"
+  description="Structural plans for Adelaide homes, extensions and renovations: footings, framing, beams and bracing, drawn by engineers for Building Consent."
+>
+  <PageHero
+    title="Structural plans: the blueprint for a solid home"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Plans', href: '/services/plans/' }]}
+    crumb="Structural Plan"
+    tabs="plans"
+  >
+    <p class="lead">Structural plans show exactly how your home is held up. They set out footings, slabs, frames, beams and bracing, and they’re what builders and certifiers rely on to make sure your home is safe.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s in a structural plan">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Footing and slab layout and details</li>
+      <li>Wall framing and bracing layout</li>
+      <li>Beam and lintel sizes and locations</li>
+      <li>Roof framing and tie-down details</li>
+      <li>Connection details</li>
+      <li>Structural notes and specifications</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="When you need a structural plan" alt>
+    <ul class="dlist">
+      <li>Building a new home or knockdown rebuild</li>
+      <li>Adding an extension or second storey</li>
+      <li>Removing or moving a load-bearing wall</li>
+      <li>Building a deck, verandah or carport</li>
+      <li>Repairing structural damage</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Prepared by engineers">
+    <p>Our structural plans are prepared by our engineering team and based on your soil report, design and site conditions. <Placeholder>[TEAM QUALIFICATIONS: engineer responsible.]</Placeholder></p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Structural engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Structural plan vs engineering plans" alt>
+    <p>A structural plan focuses on the structure itself. Our engineering plans cover the full package, including site works, levels and drainage. We’ll recommend what your project needs.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/plans/engineering-plans/">Engineering plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Do I need a structural plan for Building Consent?">
+        <p>Most building work involving structure needs engineering documentation for Building Consent.</p>
+      </FaqItem>
+      <FaqItem question="How long do structural plans take?">
+        <p><Placeholder>[CLIENT TO CONFIRM: typical turnaround.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your structural plans">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

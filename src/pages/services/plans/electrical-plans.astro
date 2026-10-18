@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Electrical Plans & Lighting Layouts for Homes Adelaide"
+  description="Room-by-room electrical plans for new homes and renovations in Adelaide: power points, lighting, switches, data and appliances, planned upfront."
+>
+  <PageHero
+    title="Electrical plans that put power where you need it"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Plans', href: '/services/plans/' }]}
+    crumb="Electrical Plans"
+    tabs="plans"
+  >
+    <p class="lead">Ever lived in a home where the power point is behind the couch and the light switch is on the wrong side of the door? An electrical plan prevents that. It maps out every power point, light, switch and data point before construction starts.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s in an electrical plan">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Power point locations and types</li>
+      <li>Lighting positions, including downlights, pendants and feature lighting</li>
+      <li>Switch locations and which lights they control</li>
+      <li>Data, TV and phone points</li>
+      <li>Appliance connections, such as ovens, cooktops and dishwashers</li>
+      <li>Outdoor lighting and power</li>
+      <li>Smoke alarm locations</li>
+      <li>Provision for solar, batteries and EV charging where wanted</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Plan it around how you live" alt>
+    <p>We’ll walk through each room with you. Where will the bed go? Where will you charge your phone? Where will the TV sit? These everyday details make a big difference to how your home feels to live in.</p>
+  </Section>
+
+  <Section num="03" title="Coordinated with your design">
+    <p>Your electrical plan is prepared alongside your floor plans, interiors and joinery, so power and lighting line up with your furniture, benches and cabinetry.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/interior-design/">Interior design</ArrowLink>
+      <ArrowLink class="tlink" href="/services/interior-design/furniture-joinery/">Furniture and joinery</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Installed by licensed electricians" alt>
+    <p>All electrical work in SA must be carried out by licensed electricians and comply with Australian wiring rules. Your plan gives your electrician clear direction for installation. <Placeholder>[CLIENT TO CONFIRM: whether they use their own licensed electricians or subcontractors.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can I change my electrical plan during the build?">
+        <p>Changes may be possible, but they can add cost. Getting it right upfront is the best way to avoid variations.</p>
+      </FaqItem>
+      <FaqItem question="Do you prepare electrical plans for renovations?">
+        <p>Yes.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Plan your power properly">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

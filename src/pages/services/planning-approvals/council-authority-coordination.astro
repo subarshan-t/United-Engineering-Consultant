@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Council & Authority Coordination Adelaide | UEC"
+  description="We deal with councils, PlanSA, SA Water and other authorities for you, so your Adelaide home project keeps moving."
+>
+  <PageHero
+    title="We deal with the authorities, so you don’t have to"
+    image="/images/s4.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Planning and Approvals', href: '/services/planning-approvals/' }]}
+    crumb="Council & Authority Coordination"
+    tabs="planningApprovals"
+  >
+    <p class="lead">Building a home involves more than one approval. Along the way you may need to deal with your local council, PlanSA, SA Water, SA Power Networks and other authorities. Each has its own forms, fees and timeframes, and a delay with one can hold up everything.</p>
+    <p class="lead">We manage these relationships for you.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your project</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Who we coordinate with">
+    <p><Placeholder>[CLIENT TO CONFIRM: authorities they regularly deal with.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Local councils: planning, building, stormwater and crossover requirements</li>
+      <li>PlanSA: lodging and tracking your applications</li>
+      <li>Accredited professionals: private assessment of planning or building consents where appropriate</li>
+      <li>SA Water: water and sewer connections and requirements</li>
+      <li>SA Power Networks: power connections and clearances</li>
+      <li>Other bodies as needed, depending on your site</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="What we take care of" alt>
+    <ul class="dlist">
+      <li>Pre-lodgement advice and enquiries</li>
+      <li>Preparing and lodging applications</li>
+      <li>Responding to requests for more information</li>
+      <li>Tracking progress and following up</li>
+      <li>Coordinating connections and service requirements</li>
+      <li>Keeping you updated at every step</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Why it matters">
+    <p>Most project delays happen in the gaps: waiting on an authority, waiting on a response, waiting on a document. Having one team keeping track of everything helps keep your project moving.</p>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Do I need to talk to council myself?">
+        <p>Not usually. We handle the communication, though we’ll keep you informed and let you know if we need anything from you.</p>
+      </FaqItem>
+      <FaqItem question="Can you help with an application that’s stalled?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether they take on existing applications.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Keep your project moving">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your project</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

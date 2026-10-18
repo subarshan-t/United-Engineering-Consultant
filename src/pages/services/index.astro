@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+---
+<BaseLayout
+  title="Home Design, Engineering & Building Services Adelaide"
+  description="From concept design and structural engineering to council approvals, interiors and construction. See how UEC can help with your Adelaide home."
+>
+  <PageHero
+    title="Everything your home needs, under one roof"
+    image="/images/s1.jpg"
+    crumb="Services"
+    tabs="services"
+  >
+    <p class="lead">Designing, engineering, approving and building a home takes a lot of different skills. Normally that means a lot of different businesses. With United Engineering Consultants, it’s one team working together on your project from start to finish.</p>
+    <p class="lead">Use us for the whole journey, or just the part you need.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Residential design">
+    <p>Turn your ideas into a home that fits your block, your budget and your life. We take you from first concept through to detailed construction drawings, with 3D visuals so you can see your home before it’s built.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/residential-design/">Explore residential design</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="02" title="Structural engineering" alt>
+    <p>The part of your home you’ll never see, and the part that matters most. We design footings, structures, drainage and retaining walls to suit Adelaide’s soils and your site.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Explore structural engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="Planning and approvals">
+    <p>In South Australia, most building work needs Development Approval before it can start. We prepare your application, lodge it and manage the process through to approval.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/planning-approvals/">Explore planning and approvals</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Subdivision & Land Division" alt>
+    <p>Thinking of splitting your block or building more than one home? We’ll help you understand what’s possible and take care of the design and approvals.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/subdivision-land-division/">Explore subdivision and land division</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Interior design">
+    <p>From kitchens and bathrooms to joinery and finishes, we help you create interiors that look good and work hard, designed alongside the rest of your home.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/interior-design/">Explore interior design</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="06" title="Plans" alt>
+    <p>Need a specific set of plans? We prepare house plans, engineering plans, electrical, plumbing and air conditioning layouts and structural plans for homeowners, builders and developers.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/plans/">Explore our plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="07" title="Construction">
+    <p>We don’t just hand you a set of drawings and wish you luck. As a licensed SA builder, we build what we design, so the people who planned your home are the ones who deliver it.</p>
+  </Section>
+
+  <Section num="08" title="Why one team makes a difference" alt>
+    <p>When your designer, engineer and builder are separate businesses, every change has to travel between them. That takes time, and it’s where mistakes and extra costs creep in. Keeping everything together means:</p>
+    <ul class="dlist">
+      <li>Your design is checked for buildability and cost from the start</li>
+      <li>Engineering is built into the design, not bolted on afterwards</li>
+      <li>Council questions get answered quickly by the people who drew the plans</li>
+      <li>You have one point of contact for the whole project</li>
+    </ul>
+  </Section>
+
+  <CtaBanner title="Not sure where to start?">
+    <p slot="text">That’s what the first conversation is for. Tell us what you’d like to build and we’ll suggest the right mix of services.</p>
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

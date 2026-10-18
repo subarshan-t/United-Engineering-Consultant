@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ContactBlock from '../components/ContactBlock.astro';
+import Licence from '../components/Licence.astro';
+import Placeholder from '../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Contact United Engineering Consultants | Adelaide Builders"
+  description="Chat to United Engineering Consultants about your new home, renovation, granny flat or development in Adelaide. Book a consultation today."
+>
+  <PageHero
+    title="Ready to start your project?"
+    image="/images/cta.jpg"
+    crumb="Contacts"
+  >
+    <p class="lead">Whether you’re just starting to think about building or you’re ready to go, we’d love to hear from you. Tell us a bit about your project and we’ll be in touch <Placeholder>[CLIENT TO CONFIRM: response time, e.g. within one business day]</Placeholder>.</p>
+  </PageHero>
+
+  <section class="sec">
+    <div class="wrap">
+      <ContactBlock title="Request a quote" />
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap sec-grid">
+      <div>
+        <div class="eyebrow">AFTER YOU GET IN TOUCH</div>
+        <h2 class="serif h2-lg">What happens next</h2>
+      </div>
+      <div class="sec-body">
+        <ol class="next">
+          <li><span>01</span>We’ll call you to learn a bit more about your project</li>
+          <li><span>02</span>We’ll book a time for your initial consultation</li>
+          <li><span>03</span>We’ll talk through your ideas, site and budget, and recommend the next steps</li>
+        </ol>
+        <p class="lic">Building Work Contractor’s Licence <Licence /></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

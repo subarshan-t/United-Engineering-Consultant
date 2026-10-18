@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Plumbing Plans & Hydraulic Layouts for Homes Adelaide"
+  description="Plumbing plans for Adelaide homes and renovations: water supply, waste, stormwater and fixture layouts coordinated with your design."
+>
+  <PageHero
+    title="Plumbing plans that get every pipe in the right place"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Plans', href: '/services/plans/' }]}
+    crumb="Plumbing Plans"
+    tabs="plans"
+  >
+    <p class="lead">Once a concrete slab is poured, moving a pipe gets expensive fast. A plumbing plan maps out where water comes in, where waste goes out and where every fixture sits, so it’s right before construction starts.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s in a plumbing plan">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions, and whether stormwater is covered here or in the site and drainage plan.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Water supply layout, including hot and cold</li>
+      <li>Sanitary drainage for toilets, showers, basins and sinks</li>
+      <li>Kitchen, laundry and bathroom fixture locations</li>
+      <li>Hot water system location</li>
+      <li>Rainwater tank connections where needed</li>
+      <li>Gas points, where applicable</li>
+      <li>Connection points to SA Water services</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Coordinated with your kitchens and bathrooms" alt>
+    <p>Your plumbing plan works hand in hand with your kitchen and bathroom design, so every tap, toilet and drain is exactly where it’s meant to be.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/interior-design/kitchen-bathroom-design/">Kitchen and bathroom design</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="Coordinated with your slab and site">
+    <p>Pipes running under your slab need to be planned with your footing design and site drainage. We prepare all three together.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/footings-foundations/">Footings and foundations</ArrowLink>
+      <ArrowLink class="tlink" href="/services/structural-engineering/site-drainage-plans/">Site and drainage plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Installed by licensed plumbers" alt>
+    <p>Plumbing work in SA must be carried out by licensed plumbers and meet Australian plumbing standards. Your plan gives them clear direction.</p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Do I need a plumbing plan for a renovation?">
+        <p>If you’re moving or adding fixtures, a plumbing plan helps avoid problems and extra costs.</p>
+      </FaqItem>
+      <FaqItem question="Can you plan for future additions like a pool or granny flat?">
+        <p>Yes. We can allow for future connections in your plumbing plan.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your plumbing planned properly">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

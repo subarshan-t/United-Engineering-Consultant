@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ArrowLink from '../components/ArrowLink.astro';
+---
+<BaseLayout
+  title="Page not found | United Engineering Consultants"
+  description="The page you were looking for couldn’t be found."
+>
+  <PageHero title="We couldn’t find that page" image="/images/cta.jpg" crumb="Page not found">
+    <p class="lead">The page may have moved, or the link may be out of date.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/" slot="actions">Back to home</ArrowLink>
+    <a class="btn btn-outline-light btn-lg" href="/contact/" slot="actions">Contact us</a>
+  </PageHero>
+</BaseLayout>

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Granny Flat Builders Adelaide | Secondary Dwellings | UEC"
+  description="Granny flats and secondary dwellings in Adelaide, designed, approved and built by UEC. For family, guests or rental income."
+>
+  <PageHero
+    title="Granny flats and secondary dwellings with room to grow"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Projects', href: '/projects/' }]}
+    crumb="Secondary Dwellings"
+    tabs="projects"
+  >
+    <p class="lead">Ageing parents who need to be close. Adult kids saving for their first home. A home office or studio. Extra rental income. A granny flat can be the answer to all of these, and in South Australia, the rules have made them even more useful.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Granny flats can now be rented to anyone">
+    <p>Since November 2023, SA regulations allow granny flats (known in planning terms as ancillary accommodation) to be leased or rented to anyone, not just family members of the people living in the main home. According to PlanSA, this applies even if the original approval restricted who could live there.</p>
+  </Section>
+
+  <Section num="02" title="What we design and build" alt>
+    <p><Placeholder>[CLIENT TO CONFIRM: types of secondary dwellings offered.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Detached granny flats in the backyard</li>
+      <li>Attached secondary dwellings</li>
+      <li>Studios and home offices</li>
+      <li>Dual living layouts</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Our process">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Check what’s possible</h3>
+        <p>We look at your block, zone and planning rules to see what can fit.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Design</h3>
+        <p>We design a secondary dwelling that works with your main home and your backyard.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Engineer</h3>
+        <p>Footings, structure and drainage designed for your site.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Approve</h3>
+        <p>We manage the approvals your project needs.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>Build</h3>
+        <p>We build it and hand it over, ready to live in.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Secondary dwelling projects" alt>
+    <p><Placeholder>[PROJECT GALLERY: completed granny flats.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Do I need approval for a granny flat in SA?">
+        <p>Most secondary dwellings need Development Approval. Requirements depend on your zone and design. We’ll check your property.</p>
+      </FaqItem>
+      <FaqItem question="How big can my granny flat be?">
+        <p>Size limits depend on the planning rules for your property. We’ll tell you what applies.</p>
+      </FaqItem>
+      <FaqItem question="Can I rent out my granny flat?">
+        <p>Under SA rules introduced in November 2023, yes, granny flats can be rented to anyone. Check with your accountant about tax implications.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Add value and flexibility to your property">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

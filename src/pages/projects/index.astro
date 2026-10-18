@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Home Building Projects Adelaide | New Homes & Renovations"
+  description="See new homes, custom homes, renovations, knockdown rebuilds, granny flats and developments designed, engineered and built by UEC in Adelaide."
+>
+  <PageHero
+    title="Recent projects across Adelaide"
+    image="/images/p1.jpg"
+    crumb="Projects"
+    tabs="projects"
+  >
+    <p class="lead">Every home we work on starts with someone’s idea of a better way to live. Here’s a look at the homes we’ve designed, engineered and built across Adelaide.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Browse by project type">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>New homes</h3>
+        <p>Family homes designed and built from the ground up.</p>
+        <div class="card-links">
+          <ArrowLink href="/projects/new-homes/">New homes</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Custom homes</h3>
+        <p>One-of-a-kind homes designed around their owners.</p>
+        <div class="card-links">
+          <ArrowLink href="/projects/custom-homes/">Custom homes</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Renovations and extensions</h3>
+        <p>More space, more light and a better layout for existing homes.</p>
+        <div class="card-links">
+          <ArrowLink href="/projects/renovations-extensions/">Renovations and extensions</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Knockdown &amp; Rebuild</h3>
+        <p>Staying in the suburb you love, in a brand-new home.</p>
+        <div class="card-links">
+          <ArrowLink href="/projects/knockdown-rebuild/">Knockdown &amp; Rebuild</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>Secondary dwellings</h3>
+        <p>Granny flats and extra living spaces for family or rental income.</p>
+        <div class="card-links">
+          <ArrowLink href="/projects/secondary-dwellings/">Secondary dwellings</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">06</span>
+        <h3>Development and subdivision</h3>
+        <p>Turning one block into multiple homes.</p>
+        <div class="card-links">
+          <ArrowLink href="/projects/development-subdivision/">Development and subdivision</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="Featured projects" alt>
+    <p><Placeholder>[PROJECT GALLERY: project cards with photo, suburb, project type and short description.]</Placeholder></p>
+  </Section>
+
+  <CtaBanner title="Your project could be next">
+    <p slot="text">Tell us what you’re dreaming of, and we’ll show you how we can bring it to life.</p>
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

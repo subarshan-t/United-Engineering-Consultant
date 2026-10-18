@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Small Developments & Subdivision Builders Adelaide"
+  description="From feasibility to handover, UEC designs, engineers, approves and builds small residential developments and subdivisions in Adelaide."
+>
+  <PageHero
+    title="Small developments, managed from feasibility to handover"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Projects', href: '/projects/' }]}
+    crumb="Development & Subdivision"
+    tabs="projects"
+  >
+    <p class="lead">Turning one block into two, three or more homes is one of the most popular ways to add value in Adelaide. But developing involves design, engineering, land division, approvals and construction, and every step affects your return. We manage all of it.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your development</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Who we work with">
+    <ul class="dlist">
+      <li>Homeowners subdividing their own block</li>
+      <li>Families building two homes on one site</li>
+      <li>Investors and small developers</li>
+      <li>Landowners planning a knockdown and multi-dwelling rebuild</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="What we do" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Feasibility</h3>
+        <p>We look at your site, zone and the Planning and Design Code rules to see what can be built.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Design</h3>
+        <p>We design allotments and homes together to make the best use of your land.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Engineering</h3>
+        <p>Footings, structure, site works, stormwater and retaining walls for every dwelling.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Land division and approvals</h3>
+        <p>We manage Land Division Consent, Planning Consent, Building Consent and Development Approval.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/subdivision-land-division/">Subdivision &amp; Land Division</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>Construction</h3>
+        <p>We build your new homes and hand them over.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Why it matters to have one team">
+    <p>On a development, delays and design changes cost money. Having design, engineering and construction under one roof means fewer hand-offs, faster answers and a clearer picture of costs from the start.</p>
+  </Section>
+
+  <Section num="04" title="Development projects" alt>
+    <p><Placeholder>[PROJECT GALLERY: completed developments.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can you tell me if my block can be developed?">
+        <p>Yes. We’ll review your site and give you straight advice on what’s possible.</p>
+      </FaqItem>
+      <FaqItem question="Do you only build developments you’ve designed?">
+        <p><Placeholder>[CLIENT TO CONFIRM.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Find out what your site could become">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your development</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

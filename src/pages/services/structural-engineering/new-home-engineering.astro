@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="New Home Structural Engineering Adelaide | UEC"
+  description="Complete structural engineering for new homes and knockdown rebuilds in Adelaide, from soil report to footings, framing and drainage."
+>
+  <PageHero
+    title="New home engineering, built into your design from day one"
+    image="/images/s3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Structural Engineering', href: '/services/structural-engineering/' }]}
+    crumb="New Home Engineering"
+    tabs="structuralEngineering"
+  >
+    <p class="lead">A new home needs a complete engineering package before it can get Building Consent and before a builder can start. We prepare everything your new home needs, working alongside your design, so it’s engineered properly from the ground up.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to an engineer</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s included">
+    <p><Placeholder>[CLIENT TO CONFIRM: final list of inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Review of your soil report and site classification</li>
+      <li>Footing and slab design</li>
+      <li>Structural framing design, including beams, lintels and bracing</li>
+      <li>Roof structure design</li>
+      <li>Site works, stormwater and drainage plans</li>
+      <li>Retaining walls where needed</li>
+      <li>Engineering certification and documentation for Building Consent</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="How it works" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>1. We start with your site</h3>
+        <p>Your soil report tells us how much the ground is likely to move. Slope, trees, existing services and neighbouring buildings also affect your design.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>2. We work with your design</h3>
+        <p>Our engineers review your design as it develops, so structural elements are worked in early rather than forced in late.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>3. We design and document</h3>
+        <p>We prepare engineering drawings and calculations that meet the National Construction Code and relevant Australian Standards.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>4. We support approvals and construction</h3>
+        <p>We provide documentation for Building Consent and answer any engineering questions from assessors or on site.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="New homes and knockdown rebuilds">
+    <p>Knockdown rebuilds bring their own challenges: old footings, existing trees, tight access and neighbours close by. We factor all of these into your engineering so your new home suits the site as it is today.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/projects/knockdown-rebuild/">Knockdown &amp; Rebuild projects</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Designed, engineered and built by one team" alt>
+    <p>Because we also design and build homes, our engineering is practical as well as compliant. We think about how things will be built on site, which helps keep costs down and construction on track.</p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="When should the engineer get involved?">
+        <p>As early as possible. Engineering input during concept design helps avoid costly changes later.</p>
+      </FaqItem>
+      <FaqItem question="How long does new home engineering take?">
+        <p><Placeholder>[CLIENT TO CONFIRM: typical turnaround.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your new home on the right foundation">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to an engineer</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

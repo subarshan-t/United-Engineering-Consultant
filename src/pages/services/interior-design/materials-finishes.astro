@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Home Materials, Colours & Finishes Selection Adelaide"
+  description="Get expert help choosing flooring, tiles, benchtops, cladding, colours and fixtures for your Adelaide home, with costs clear as you choose."
+>
+  <PageHero
+    title="Choose materials and finishes with confidence"
+    image="/images/s2.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Interior Design', href: '/services/interior-design/' }]}
+    crumb="Materials & Finishes"
+    tabs="interiorDesign"
+  >
+    <p class="lead">Flooring, tiles, benchtops, tapware, cladding, roofing, paint colours. The choices can feel endless, and every one affects how your home looks, how it lasts and how much it costs. We help you make choices you’ll be happy with for years.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we help you choose">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Inside</h3>
+        <p class="bul">Flooring, including timber, tiles, carpet and hybrid</p>
+        <p class="bul">Wall and floor tiles</p>
+        <p class="bul">Benchtops and splashbacks</p>
+        <p class="bul">Cabinetry finishes and hardware</p>
+        <p class="bul">Tapware, sinks and bathroom fixtures</p>
+        <p class="bul">Lighting fixtures</p>
+        <p class="bul">Paint colours</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Outside</h3>
+        <p class="bul">Bricks, render and cladding</p>
+        <p class="bul">Roofing materials and colours</p>
+        <p class="bul">Windows and doors</p>
+        <p class="bul">Paving and driveways</p>
+        <p class="bul">Fencing and gates</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="Balancing looks, durability and budget" alt>
+    <p>A good selection isn’t just about what looks best in the showroom. We’ll help you think about:</p>
+    <ul class="dlist">
+      <li>How each material holds up to kids, pets and daily wear</li>
+      <li>Maintenance and cleaning</li>
+      <li>How materials suit Adelaide’s hot summers</li>
+      <li>How your choices work together across the home</li>
+      <li>What each choice does to your budget</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="No surprise costs">
+    <p>Upgrades during selections are one of the most common causes of budget blowouts. We talk you through the cost of your choices as you make them, so your final quote reflects your selections and you know where you stand before you sign.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/final-quote/">Final quote</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="When do selections happen?">
+        <p>Ideally before your final quote, so your price includes your chosen finishes. <Placeholder>[CLIENT TO CONFIRM: when selections happen in their process.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Do you have a selections showroom or supplier partners?">
+        <p><Placeholder>[CLIENT TO CONFIRM.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Make choices you’ll love">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

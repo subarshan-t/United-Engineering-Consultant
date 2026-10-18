@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Engineering Plans for Homes Adelaide | UEC"
+  description="Engineering plans for Adelaide homes and extensions: footings, structure, site works and drainage, prepared for Building Consent."
+>
+  <PageHero
+    title="Engineering plans that keep your home solid and compliant"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Plans', href: '/services/plans/' }]}
+    crumb="Engineering Plans"
+    tabs="plans"
+  >
+    <p class="lead">Engineering plans show how your home will stand up and how water will be managed around it. They’re needed for Building Consent and they guide your builder on site.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s included">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Footing and slab plans</li>
+      <li>Structural framing and beam details</li>
+      <li>Site works and levels</li>
+      <li>Stormwater and drainage layout</li>
+      <li>Retaining wall details where needed</li>
+      <li>Engineering notes and specifications</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Engineering plans vs structural plans" alt>
+    <p>Our engineering plans cover the full engineering package for your project, including site works and drainage. Our structural plans focus on the structure itself: footings, frames and beams. Many projects need both, and we can prepare them together.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/plans/structural-plan/">Structural plan</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="Prepared for Adelaide conditions">
+    <p>With reactive clay soils common in many parts of Adelaide, your engineering needs to suit your site. Our plans are based on your soil report and site classification.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/footings-foundations/">Footings and foundations</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="For builders and owner-builders" alt>
+    <p>Need engineering plans for a project you’re building yourself? We work with builders and owner-builders across Adelaide.</p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Do I need engineering plans for an extension?">
+        <p>Most extensions need engineering for footings and structure. We’ll tell you what your project needs.</p>
+      </FaqItem>
+      <FaqItem question="Will you certify the engineering?">
+        <p><Placeholder>[CLIENT TO CONFIRM: certification provided and by whom.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your engineering plans">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

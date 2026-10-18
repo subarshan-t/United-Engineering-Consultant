@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Development Approval SA | DA Process Explained | UEC"
+  description="What is Development Approval in South Australia, and how do you get it? UEC manages every consent your home needs through to final approval."
+>
+  <PageHero
+    title="Development Approval: the green light to build"
+    image="/images/s4.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Planning and Approvals', href: '/services/planning-approvals/' }]}
+    crumb="Development Approval"
+    tabs="planningApprovals"
+  >
+    <p class="lead">Development Approval is the final approval you need before building work can start in South Australia. It’s issued once all the consents your project needs have been granted.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your project</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="How Development Approval works">
+    <p>Think of Development Approval as the umbrella over your project. Underneath it sit the individual consents:</p>
+    <p>Some projects need all three. Some need only one. Once every required consent is granted, Development Approval is issued.</p>
+    <ul class="dlist">
+      <li>Planning Consent, if your project has a planning impact</li>
+      <li>Building Consent, if it involves building work</li>
+      <li>Land Division Consent, if you’re changing property boundaries</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Before building starts" alt>
+    <p>Development Approval isn’t quite the last step. For eligible domestic building work in SA, building indemnity insurance must be in place before work begins. According to SA.GOV.AU, it’s needed for building work of $20,000 or more that needs council approval, it’s arranged by your building work contractor, and work can’t start until you and council have received the certificate. As your builder, we take care of this.</p>
+  </Section>
+
+  <Section num="03" title="How we get you there">
+    <ul class="dlist">
+      <li>We work out which consents your project needs</li>
+      <li>We prepare all the drawings, engineering and reports</li>
+      <li>We lodge and manage each consent through PlanSA</li>
+      <li>We respond to assessors’ questions and requests</li>
+      <li>We coordinate the final approval and get you ready to build</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/planning-approvals/planning-consent/">Planning Consent</ArrowLink>
+      <ArrowLink class="tlink" href="/services/planning-approvals/building-consent/">Building Consent</ArrowLink>
+      <ArrowLink class="tlink" href="/services/planning-approvals/council-authority-coordination/">Council and authority coordination</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="How long does Development Approval take?">
+        <p>It depends on your project and how many consents it needs. We’ll give you a realistic timeline.</p>
+      </FaqItem>
+      <FaqItem question="How long does Development Approval last?">
+        <p>Approvals have time limits for starting and completing work. We’ll let you know the conditions that apply to yours.</p>
+      </FaqItem>
+      <FaqItem question="What does it cost?">
+        <p>Application fees are set by the state and council and depend on your project. We’ll include these in your fee proposal. <Placeholder>[CLIENT TO CONFIRM: whether fees are included or passed through.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your green light">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your project</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

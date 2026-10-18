@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Site & Stormwater Drainage Plans Adelaide | UEC"
+  description="Site works and stormwater drainage plans for Adelaide homes. Levels, stormwater and drainage designed to protect your home and meet council rules."
+>
+  <PageHero
+    title="Site and drainage plans that keep water where it belongs"
+    image="/images/s3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Structural Engineering', href: '/services/structural-engineering/' }]}
+    crumb="Site & Drainage Plans"
+    tabs="structuralEngineering"
+  >
+    <p class="lead">Water is one of the biggest threats to a home. Poor drainage can cause damp, flooding and soil movement that damages your footings. A good site and drainage plan manages where water goes before it becomes a problem.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to an engineer</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s in a site and drainage plan?">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Existing and finished ground levels</li>
+      <li>Finished floor level of your home</li>
+      <li>Cut and fill and any retaining walls</li>
+      <li>Stormwater pipes, pits and discharge points</li>
+      <li>Rainwater tanks and detention where council requires them</li>
+      <li>Paving and surface drainage falls away from the home</li>
+      <li>Driveway levels and crossover</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why it matters" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Protects your footings</h3>
+        <p>Keeping water away from your home helps keep soil moisture even, which reduces soil movement on reactive sites.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Meets council requirements</h3>
+        <p>Councils have stormwater requirements, and many need to see how water will be managed as part of your application.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Avoids neighbour disputes</h3>
+        <p>Stormwater needs to be directed properly rather than onto neighbouring land. A clear plan helps avoid problems down the track.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Especially important for">
+    <ul class="dlist">
+      <li>Sloping blocks</li>
+      <li>Knockdown rebuilds and infill sites where homes are close together</li>
+      <li>Subdivisions and multiple dwellings</li>
+      <li>Sites with low points or limited places to discharge stormwater</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Part of your engineering package" alt>
+    <p>Site and drainage plans are prepared alongside your footing design and retaining walls, so the levels, structure and drainage all work together.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/footings-foundations/">Footings and foundations</ArrowLink>
+      <ArrowLink class="tlink" href="/services/structural-engineering/retaining-walls/">Retaining walls</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Does council need a drainage plan?">
+        <p>Many applications need to show how stormwater will be managed. We’ll check what your council and project require.</p>
+      </FaqItem>
+      <FaqItem question="Do I need a rainwater tank?">
+        <p>Requirements depend on your project and location. We’ll include it in your plans where it’s needed.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Plan for water before it becomes a problem">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to an engineer</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

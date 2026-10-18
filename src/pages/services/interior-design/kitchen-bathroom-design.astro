@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Kitchen & Bathroom Design Adelaide | UEC"
+  description="Kitchen and bathroom design for new homes and renovations in Adelaide. Practical layouts, quality finishes and plumbing planned from the start."
+>
+  <PageHero
+    title="Kitchens and bathrooms that work as well as they look"
+    image="/images/s2.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Interior Design', href: '/services/interior-design/' }]}
+    crumb="Kitchen & Bathroom Design"
+    tabs="interiorDesign"
+  >
+    <p class="lead">Kitchens and bathrooms are the most-used, most-expensive rooms in most homes. They’re also the hardest to change once they’re built. That makes good design here worth every minute.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Kitchen design">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Layouts that work</h3>
+        <p>The right layout makes cooking, cleaning and gathering easier. We plan the space between your fridge, sink and cooktop, bench space, island size and walkways so the kitchen works for how you cook.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Storage that makes sense</h3>
+        <p>Pantries, drawers, overhead cupboards and appliance storage, designed so everything has a place.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Finishes you’ll love</h3>
+        <p>Benchtops, splashbacks, cabinetry, handles and tapware, chosen to suit your style and budget.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="Bathroom design" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Main bathrooms, ensuites and powder rooms</h3>
+        <p>We design bathrooms that feel good to use every day, with the right amount of space, storage and light.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Wet area details done properly</h3>
+        <p>Waterproofing, falls to drains and ventilation all need to meet the National Construction Code. Our designers and builders plan these details together, so your bathroom is built to last.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Accessible design</h3>
+        <p>Planning to stay in your home long term? We can design bathrooms with features that make life easier as needs change.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Planned with your plumbing and electrical">
+    <p>Moving a sink, toilet or shower after the slab is poured is costly. We plan your kitchen and bathroom layouts alongside your plumbing and electrical plans, so every pipe and power point is exactly where it should be.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/plans/plumbing-plans/">Plumbing plans</ArrowLink>
+      <ArrowLink class="tlink" href="/services/plans/electrical-plans/">Electrical plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="For renovations" alt>
+    <p>Updating a tired kitchen or bathroom? We’ll design a new space that works with your existing home and manage any structural, plumbing or approval requirements.</p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Do you build kitchens and bathrooms too?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether they do kitchen and bathroom renovations as standalone jobs.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Can you work within a set budget?">
+        <p>Yes. Tell us your budget upfront and we’ll design to it, showing you where it’s worth spending and where you can save.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Design your kitchen or bathroom">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

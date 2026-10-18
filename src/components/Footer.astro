@@ -1,0 +1,44 @@
+---
+import Brand from './Brand.astro';
+import Placeholder from './Placeholder.astro';
+import Licence from './Licence.astro';
+import { serviceGroups, projectLinks } from '../data/navigation';
+import { site, placeholders } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <Brand dark />
+        <p class="f-tag">Engineering &amp; design solutions for South Australian homes.</p>
+        <p class="f-sub">Residential design, structural and civil engineering, and building approvals across Adelaide and South Australia.</p>
+      </div>
+      <div class="f-col">
+        <span class="f-h">SERVICES</span>
+        {serviceGroups.map((g) => <a href={g.href}>{g.label}</a>)}
+      </div>
+      <div class="f-col">
+        <span class="f-h">PROJECTS</span>
+        {projectLinks.map((p) => <a href={p.href}>{p.label}</a>)}
+      </div>
+      <div class="f-col">
+        <span class="f-h">CONTACT</span>
+        {site.phone ? <a href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a> : <span><Placeholder>{placeholders.phone}</Placeholder></span>}
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <span>{site.location}</span>
+        <span>{site.hoursShort}</span>
+      </div>
+    </div>
+    <div class="f-legal">
+      <p>
+        Building Work Contractor’s Licence <Licence /> | ABN {site.abn ?? <Placeholder>{placeholders.abn}</Placeholder>} | {site.engineerCredential ?? <Placeholder>{placeholders.engineerCredential}</Placeholder>}
+      </p>
+    </div>
+    <div class="f-bottom">
+      <span>© {year} United Engineering Consultants. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>

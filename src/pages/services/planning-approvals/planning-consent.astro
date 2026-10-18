@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+---
+<BaseLayout
+  title="Planning Consent SA | Application & Lodgement | UEC"
+  description="Need Planning Consent in South Australia? UEC prepares, lodges and manages your planning application against the Planning and Design Code."
+>
+  <PageHero
+    title="Planning Consent, without the headaches"
+    image="/images/s4.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Planning and Approvals', href: '/services/planning-approvals/' }]}
+    crumb="Planning Consent"
+    tabs="planningApprovals"
+  >
+    <p class="lead">Planning Consent is the first big approval hurdle for most building projects in South Australia. It’s where your project is checked against the planning rules for your area, things like how big it is, how high it is, how close it sits to the boundaries and how it looks from the street.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your project</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What is Planning Consent?">
+    <p>According to PlanSA, Planning Consent is needed for development that may have a planning impact on the surrounding area, such as new homes, building extensions, changing how land is used or removing significant trees. It’s usually granted by your local council or an accredited professional, and occasionally the State Planning Commission.</p>
+  </Section>
+
+  <Section num="02" title="What gets assessed" alt>
+    <p>Your application is assessed against the Planning and Design Code, which sets the rules for each zone across South Australia. Depending on your zone and any overlays, assessors may look at:</p>
+    <ul class="dlist">
+      <li>Building height and number of storeys</li>
+      <li>Setbacks from boundaries and the street</li>
+      <li>Site coverage and private open space</li>
+      <li>Car parking and driveway access</li>
+      <li>Overlooking and overshadowing of neighbours</li>
+      <li>Heritage, character or other special area rules</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="How we help">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>We check your site early</h3>
+        <p>Before we finish your design, we look at the zone and overlays that apply to your property, so the design meets the rules from the start.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>We prepare your planning drawings</h3>
+        <p>Clear, accurate drawings reduce the chance of requests for more information.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/residential-design/planning-drawings/">Planning drawings</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>We lodge through PlanSA</h3>
+        <p>We submit your application through the PlanSA portal on your behalf.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>We manage the process</h3>
+        <p>If the assessor has questions or asks for changes, we respond and update the plans for you.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Does my project need Planning Consent?">
+        <p>Most new homes, extensions and granny flats do, but some minor works don’t. We’ll tell you what your project needs.</p>
+      </FaqItem>
+      <FaqItem question="Will my neighbours be notified?">
+        <p>Some applications require public notification, depending on how they’re assessed. We’ll let you know if yours does.</p>
+      </FaqItem>
+      <FaqItem question="What happens if my application is refused?">
+        <p>We’ll talk you through your options, which may include changing the design and reapplying.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your project through planning">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your project</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

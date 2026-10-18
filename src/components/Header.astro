@@ -1,0 +1,41 @@
+---
+import Brand from './Brand.astro';
+import { mainNav, serviceGroups } from '../data/navigation';
+import { isActive } from '../lib/paths';
+
+const path = Astro.url.pathname;
+---
+<header class="site-header" id="site-header">
+  <div class="wrap bar">
+    <Brand />
+    <nav class="main-nav" aria-label="Main">
+      {mainNav.map((item) => (
+        <a href={item.href} class:list={['nav-link', { 'is-active': isActive(item.href, path) }]} data-mega={item.mega ? '' : undefined}>{item.label}</a>
+      ))}
+    </nav>
+    <a class="btn btn-sand header-cta" href="/contact/">Request a Quote <span class="arr" aria-hidden="true">→</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mega" id="mega">
+    <div class="wrap mega-grid">
+      {serviceGroups.map((group) => (
+        <div class="mega-col">
+          <a class="mega-hub" href={group.href}>{group.label}</a>
+          {group.children.map((child) => <a href={child.href}>{child.label}</a>)}
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mm-top">
+    <Brand />
+    <button class="mm-close" id="mm-close" aria-label="Close menu">×</button>
+  </div>
+  <nav class="mm-nav">
+    {mainNav.map((item) => (
+      <a href={item.href} class:list={{ 'is-active': isActive(item.href, path) }}>{item.label}<span class="arr" aria-hidden="true">→</span></a>
+    ))}
+  </nav>
+  <a class="btn btn-sand mm-cta" href="/contact/">Request a Quote <span class="arr" aria-hidden="true">→</span></a>
+</div>

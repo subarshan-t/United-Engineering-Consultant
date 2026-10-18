@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Planning Drawings for Council Approval Adelaide"
+  description="Planning drawings prepared for Planning Consent in South Australia. UEC prepares site plans, floor plans and elevations that meet council requirements."
+>
+  <PageHero
+    title="Planning drawings that give your project the best chance of approval"
+    image="/images/s1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Residential Designs', href: '/services/residential-design/' }]}
+    crumb="Planning Drawings"
+    tabs="residentialDesign"
+  >
+    <p class="lead">Before you can build in South Australia, most projects need Planning Consent. That means someone at council, or an accredited professional, needs to assess whether your home fits the local planning rules. Your planning drawings are what they assess.</p>
+    <p class="lead">Clear, accurate and complete drawings help your application move through smoothly. Incomplete or unclear drawings are one of the most common reasons applications get held up with requests for more information.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What are planning drawings?">
+    <p>Planning drawings show what you want to build and how it relates to your site and your neighbours. They’re prepared against the Planning and Design Code, the rulebook used across South Australia to assess development.</p>
+  </Section>
+
+  <Section num="02" title="What’s usually included" alt>
+    <p>The exact requirements depend on your project and your zone. We’ll check what your application needs before we start drawing.</p>
+    <ul class="dlist">
+      <li>Site plan showing boundaries, setbacks, driveways and the position of your home</li>
+      <li>Floor plans showing the layout and dimensions of each level</li>
+      <li>Elevations showing the height and appearance of each side of the home</li>
+      <li>Sections through the building where needed</li>
+      <li>Details such as site coverage, private open space, landscaping and car parking where the planning rules require them</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="How we help">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>We check the rules first</h3>
+        <p>We look at the zone and overlays that apply to your property, so the design responds to them from the start rather than being fixed afterwards.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>We draw it right</h3>
+        <p>Our planning drawings are clear, accurate and prepared to the standard assessors expect.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>We lodge and manage it</h3>
+        <p>We can lodge your application through the PlanSA portal and handle any questions from the assessing authority. See our Planning Consent page for more.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/planning-approvals/planning-consent/">Planning Consent</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Do all projects need planning drawings?">
+        <p>Not every project needs Planning Consent. Some minor works are exempt or only need Building Consent. We’ll tell you what applies to your project.</p>
+      </FaqItem>
+      <FaqItem question="How long does Planning Consent take?">
+        <p>Timeframes depend on how your application is assessed and whether more information is requested. We’ll give you a realistic estimate for your project.</p>
+      </FaqItem>
+      <FaqItem question="Can you prepare planning drawings for a design someone else started?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether they take on drawings from other designers.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your plans council-ready">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

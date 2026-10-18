@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Section from '../components/Section.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import ArrowLink from '../components/ArrowLink.astro';
+import Licence from '../components/Licence.astro';
+import Placeholder from '../components/Placeholder.astro';
+---
+<BaseLayout
+  title="About United Engineering Consultants | Adelaide Engineering & Design"
+  description="Meet United Engineering Consultants, the Adelaide team designing, engineering and building homes under one roof."
+>
+  <PageHero
+    title="Engineering and design for South Australian homes"
+    image="/images/about.jpg"
+    crumb="About"
+  >
+    <p class="lead">Your home is more than a building. It’s where your kids grow up, where you gather with friends and where you come back to at the end of every day. For most people, it’s also the biggest investment they’ll ever make.</p>
+    <p class="lead">We take that seriously. That’s why we started United Engineering Consultants.</p>
+  </PageHero>
+
+  <Section num="01" title="Why we do things differently">
+    <p>Too many people building a home end up caught between separate designers, engineers, councils and builders. Plans go back and forth. Nobody takes full responsibility. Costs grow and timelines slip.</p>
+    <p>We believe there’s a better way. By bringing design, engineering, approvals and construction together under one roof, we give our clients one team that owns the whole result, from the first sketch to the final key.</p>
+    <p><Placeholder>[FOUNDER STORY: 2 to 3 sentences from the founder about why they started the business, their background and what drives them. Please supply in their own words.]</Placeholder></p>
+  </Section>
+
+  <Section num="02" title="What we stand for" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Engineering first</h3>
+        <p>Good homes start with good engineering. Footings, structure and drainage designed properly for Adelaide’s conditions are what make a home last.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Straight answers</h3>
+        <p>We tell you what’s possible, what it costs and how long it’ll take, even when it’s not what you were hoping to hear.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>One team, one responsibility</h3>
+        <p>You deal with one business that’s accountable for your whole project.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Your project, our responsibility</h3>
+        <p>Every decision we make is about getting you the home you pictured.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Meet the team">
+    <p><Placeholder>[TEAM PROFILES: name, role, photo and qualifications for each key team member, including the engineer responsible, building designer and site supervisor. Include CPEng/NER or other credentials where held.]</Placeholder></p>
+  </Section>
+
+  <Section num="04" title="Licensed, insured and accountable" alt>
+    <ul class="dlist">
+      <li>Building Work Contractor’s Licence <Licence /></li>
+      <li>Building indemnity insurance arranged for eligible homes</li>
+      <li><Placeholder>[PROFESSIONAL INDEMNITY INSURANCE: confirm details]</Placeholder></li>
+      <li><Placeholder>[MEMBERSHIPS: e.g. Master Builders SA, HIA, Engineers Australia, if applicable]</Placeholder></li>
+    </ul>
+  </Section>
+
+  <Section num="05" title="Where we work">
+    <p>Based in Adelaide’s north, we work with clients across <Placeholder>[SERVICE AREA]</Placeholder>.</p>
+  </Section>
+
+  <CtaBanner title="Let’s start your project together">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

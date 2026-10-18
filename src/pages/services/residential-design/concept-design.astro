@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Concept Design for New Homes & Renovations Adelaide"
+  description="Start your Adelaide home with a concept design that fits your block, budget and lifestyle. Layouts, sketches and early advice from UEC."
+>
+  <PageHero
+    title="Concept design: where your dream home takes shape"
+    image="/images/s1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Residential Designs', href: '/services/residential-design/' }]}
+    crumb="Concept Design"
+    tabs="residentialDesign"
+  >
+    <p class="lead">Every home starts as an idea. Maybe it’s a big open kitchen, a room for every kid or a home office with a view. Concept design is where we take those ideas and turn them into a first plan you can react to, change and get excited about.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What happens during concept design">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>We get to know you</h3>
+        <p>We’ll talk about how you live now, what’s not working and what you want your new home to feel like. We’ll also talk openly about your budget, because a design you can’t afford to build isn’t a good design.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>We study your site</h3>
+        <p>Your block shapes your home. We look at its size, slope, orientation, access, neighbouring buildings and the planning rules for your zone under the Planning and Design Code.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>We sketch options</h3>
+        <p>We prepare floor plan layouts and basic elevations showing how your home could work. You’ll see room sizes, how spaces connect and how the home sits on the land.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>We refine it with you</h3>
+        <p>You tell us what you love and what you’d change. We adjust the design until it feels right.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="What you’ll receive" alt>
+    <p><Placeholder>[CLIENT TO CONFIRM: exact concept design deliverables and number of revision rounds included.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Floor plan layouts showing rooms, sizes and flow</li>
+      <li>A site plan showing how your home sits on your block</li>
+      <li>Basic elevations showing the look of your home</li>
+      <li>Early advice on planning rules and likely approval requirements</li>
+      <li>Early engineering input on your site and structure</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Why concept design matters so much">
+    <p>The decisions made at concept stage have the biggest impact on your home’s cost, comfort and approval chances. Moving a wall on paper costs very little. Moving it once construction has started costs a lot.</p>
+    <p>Because our engineers and builders are involved from the start, your concept is checked early for buildability and cost. That means fewer surprises later.</p>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="How many design options will I see?">
+        <p><Placeholder>[CLIENT TO CONFIRM: number of initial options and revision rounds.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Can you work with a floor plan I’ve found online?">
+        <p>Yes. We can use it as inspiration and adapt it to suit your block, the planning rules and your budget.</p>
+      </FaqItem>
+      <FaqItem question="What do I need to bring to my first meeting?">
+        <p>Your site address, any existing plans or surveys you have, your budget range and any ideas or images of homes you like.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Ready to see your ideas on paper?">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Home Renovations & Extensions Adelaide | UEC"
+  description="Renovations, extensions and second storeys in Adelaide, designed, engineered, approved and built by one team at UEC. Love your home again."
+>
+  <PageHero
+    title="Love where you live, all over again"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Projects', href: '/projects/' }]}
+    crumb="Renovations & Extensions"
+    tabs="projects"
+  >
+    <p class="lead">Maybe you love your suburb but your home no longer fits. The kids need more room, the kitchen’s cramped or the layout just doesn’t work anymore. A renovation or extension can give you the home you need without moving.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we do">
+    <p><Placeholder>[CLIENT TO CONFIRM: types of renovation work they take on.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Ground floor extensions</li>
+      <li>Second-storey additions</li>
+      <li>Open-plan living conversions</li>
+      <li>Kitchen and bathroom renovations</li>
+      <li>Alfresco and outdoor living areas</li>
+      <li>Structural changes, including wall removals</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why renovations need engineering" alt>
+    <p>Renovations mean working with a structure that already exists. Can the walls carry a second storey? Is that wall load-bearing? Will the new footings work with the old ones? Our engineers answer these questions before construction starts, so there are fewer surprises once walls come down.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/structural-design/">Structural design</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="Designed to blend in">
+    <p>A good extension feels like it was always part of the home. We design additions that match or complement your existing home, inside and out.</p>
+  </Section>
+
+  <Section num="04" title="Approvals handled" alt>
+    <p>Most extensions need Development Approval. We prepare your drawings and engineering and manage the approvals for you.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/planning-approvals/">Planning and approvals</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Renovation and extension projects">
+    <p><Placeholder>[PROJECT GALLERY: completed renovations and extensions.]</Placeholder></p>
+  </Section>
+
+  <Section num="06" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Can I live in my home during the renovation?">
+        <p>It depends on the scope of work. We’ll talk through what to expect and plan the work to minimise disruption.</p>
+      </FaqItem>
+      <FaqItem question="Is it better to renovate or knock down and rebuild?">
+        <p>It depends on your home’s condition, your plans and your budget. We can help you compare both options.</p>
+      </FaqItem>
+    </div>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/projects/knockdown-rebuild/">Knockdown &amp; Rebuild</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start planning your renovation">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

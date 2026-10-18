@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Initial Consultation | Start Your Home Project | UEC"
+  description="Your home journey starts with an initial consultation. Talk through your ideas, site and budget with UEC and get honest advice on next steps."
+>
+  <PageHero
+    title="Step 1: Initial consultation"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Initial Consultations"
+    tabs="process"
+  >
+    <p class="lead">Every project starts with a conversation. Your initial consultation is a chance for us to get to know you, understand what you want to build and give you honest advice on how to get there.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we’ll talk about">
+    <ul class="dlist">
+      <li>What you want to build and why</li>
+      <li>How you live and what’s not working in your current home</li>
+      <li>Your site and any constraints you know about</li>
+      <li>Your budget and timeframe</li>
+      <li>Your must-haves and nice-to-haves</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="What to bring" alt>
+    <ul class="dlist">
+      <li>Your property address</li>
+      <li>Any existing plans, surveys or soil reports</li>
+      <li>Photos or examples of homes you like</li>
+      <li>A rough budget range</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="What you’ll leave with">
+    <ul class="dlist">
+      <li>A clearer idea of what’s possible on your site</li>
+      <li>An understanding of the approvals your project may need</li>
+      <li>Honest advice on budget and timing</li>
+      <li>A clear picture of the next steps</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Where and how long" alt>
+    <p><Placeholder>[CLIENT TO CONFIRM: meeting location (office, on site or online), typical length and whether the consultation is free.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="What happens next">
+    <p>If you’d like to go ahead, we’ll prepare a fee proposal for the design and approvals stage.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/fee-proposal/">Next step: Fee proposal</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Let’s talk about your dream home">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

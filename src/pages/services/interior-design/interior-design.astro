@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Interior Designer Adelaide | Space Planning & Styling"
+  description="Interior design in Adelaide: space planning, lighting, colour and style for new homes and renovations, designed by the team building your home."
+>
+  <PageHero
+    title="Space planning, lighting and style for the way you live"
+    image="/images/s2.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Interior Design', href: '/services/interior-design/' }]}
+    crumb="Interior Design"
+    tabs="interiorDesign"
+  >
+    <p class="lead">Good interior design starts long before the cushions arrive. It’s about where the furniture goes, how light moves through each room and whether the spaces feel calm, bright and easy to live in. Get that right, and everything else falls into place.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we help with">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Space planning</h3>
+        <p>We look at how you’ll use each room and plan layouts that flow. That includes furniture placement, traffic paths, storage and room proportions.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Lighting design</h3>
+        <p>Natural light, task lighting, feature lighting and switch locations, planned together so every room works day and night.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Colour and style</h3>
+        <p>Whether you love warm minimalism, coastal calm or classic character, we’ll develop a consistent scheme across your whole home.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Electrical and fittings planning</h3>
+        <p>Power points, data, TV points and appliance locations planned before construction, so you’re not stuck with extension cords later.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/electrical-plans/">Electrical plans</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="Designed with your build" alt>
+    <p>Because our interior designers work alongside our building designers and builders, your interior plan is built into your drawings. That means fewer on-site changes and fewer surprise costs.</p>
+  </Section>
+
+  <Section num="03" title="Our approach">
+    <ul class="dlist">
+      <li>We listen to how you live and what you love</li>
+      <li>We develop a concept and mood for your home</li>
+      <li>We plan layouts, lighting and fittings</li>
+      <li>We help you choose materials and finishes</li>
+      <li>We document everything so it’s built as designed</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="When should interior design start?">
+        <p>Ideally during design, before construction drawings are finished. That’s when changes are easiest and cheapest.</p>
+      </FaqItem>
+      <FaqItem question="Do you help with furniture and styling?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether loose furniture selection and styling are offered.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start planning your interiors">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

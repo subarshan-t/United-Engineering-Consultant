@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Custom Joinery & Built-in Furniture Design Adelaide"
+  description="Custom joinery and built-in furniture design for Adelaide homes: wardrobes, entertainment units, studies, laundries and more. Designed to fit."
+>
+  <PageHero
+    title="Custom joinery designed to fit your home and your life"
+    image="/images/s2.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Interior Design', href: '/services/interior-design/' }]}
+    crumb="Furniture & Joinery"
+    tabs="interiorDesign"
+  >
+    <p class="lead">Off-the-shelf furniture rarely fits perfectly. Custom joinery does. It makes the most of every space, gives you storage exactly where you need it and brings a finished, high-quality feel to your home.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we design">
+    <p><Placeholder>[CLIENT TO CONFIRM: joinery items offered and whether they’re built by UEC or a partner joiner.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Walk-in and built-in wardrobes</li>
+      <li>Entertainment and TV units</li>
+      <li>Home office and study nooks</li>
+      <li>Laundry cabinetry</li>
+      <li>Mudrooms and entry storage</li>
+      <li>Window seats and reading nooks</li>
+      <li>Bookshelves and display units</li>
+      <li>Bar and butler’s pantry joinery</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why design joinery early" alt>
+    <p>Joinery works best when it’s planned with the rest of your home. Designing it early means walls, power, lighting and plumbing can be positioned to suit, and the cost is included in your quote rather than added later.</p>
+  </Section>
+
+  <Section num="03" title="Our approach">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Understand how you’ll use it</h3>
+        <p>We start by asking what needs to be stored, displayed or hidden away.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Design it to fit</h3>
+        <p>We design joinery to suit your room sizes, ceiling heights and style.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Detail it for building</h3>
+        <p>Our joinery drawings show dimensions, materials, finishes and hardware, so it’s built exactly as designed.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Materials and finishes" alt>
+    <p>From timber veneers to painted finishes and laminates, we’ll help you choose materials that suit your budget and stand up to daily life.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/interior-design/materials-finishes/">Materials and finishes</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can joinery be added to an existing home?">
+        <p>Yes. We can design custom joinery for renovations or single rooms.</p>
+      </FaqItem>
+      <FaqItem question="Is custom joinery expensive?">
+        <p>It depends on size, materials and finishes. We’ll show you options to suit your budget.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Make every space work harder">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

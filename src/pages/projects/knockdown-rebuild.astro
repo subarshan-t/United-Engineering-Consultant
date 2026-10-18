@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Knockdown Rebuild Adelaide | Design, Engineer & Build"
+  description="Knockdown rebuilds in Adelaide from demolition to handover. Stay in the suburb you love with a new home designed, engineered and built by UEC."
+>
+  <PageHero
+    title="Stay where you love, in a home you’ll love"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Projects', href: '/projects/' }]}
+    crumb="Knockdown & Rebuild"
+    tabs="projects"
+  >
+    <p class="lead">You love your street, your neighbours and your local schools. You just don’t love your house anymore. A knockdown rebuild lets you keep your location and start fresh with a brand-new home designed around the way you live now.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Knockdown rebuilds are popular in South Australia">
+    <p>According to the Australian Bureau of Statistics, South Australia approved 13,884 dwellings in knockdown rebuild projects between July 2019 and June 2025. Only about half were one-for-one replacements, the lowest share of any state, which means many South Australians are replacing one home with two or more.</p>
+  </Section>
+
+  <Section num="02" title="How a knockdown rebuild works with us" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>1. Site review and feasibility</h3>
+        <p>We look at your block, the planning rules and whether you could build one home or more.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>2. Design</h3>
+        <p>We design your new home, or homes, around your block and your lifestyle.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>3. Engineering</h3>
+        <p>We design footings and drainage for your site, taking into account old footings, trees and neighbouring homes.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>4. Approvals</h3>
+        <p>We manage the consents your project needs.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>5. Demolition and site preparation</h3>
+        <p>We coordinate the demolition, disconnection of services and site preparation. <Placeholder>[CLIENT TO CONFIRM: whether demolition is in-house or subcontracted.]</Placeholder></p>
+      </div>
+      <div class="card">
+        <span class="card-n">06</span>
+        <h3>6. Build and handover</h3>
+        <p>We build your new home and hand over the keys.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Things to think about">
+    <p>We’ll help you plan for all of these.</p>
+    <ul class="dlist">
+      <li>Where you’ll live during the build</li>
+      <li>Disconnection and reconnection of services</li>
+      <li>Asbestos in older homes, which must be handled by licensed professionals</li>
+      <li>Trees, as some may be protected</li>
+      <li>Whether your block could fit two homes</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Knockdown rebuild projects" alt>
+    <p><Placeholder>[PROJECT GALLERY: completed knockdown rebuilds.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Do I need approval to demolish my home?">
+        <p>Since 2021, demolition approval isn’t required in SA for most homes unless the property is in a historic or heritage area, according to the ABS’s summary of the SA planning system. We’ll check what applies to your property.</p>
+      </FaqItem>
+      <FaqItem question="Is knockdown rebuild cheaper than renovating?">
+        <p>Sometimes. It depends on your home’s condition and what you want to achieve. We can compare both options for you.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your knockdown rebuild">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

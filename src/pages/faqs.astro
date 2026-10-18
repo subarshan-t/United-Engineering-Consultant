@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Section from '../components/Section.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import FaqItem from '../components/FaqItem.astro';
+import ArrowLink from '../components/ArrowLink.astro';
+import Licence from '../components/Licence.astro';
+import Placeholder from '../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Home Building FAQs Adelaide | Design, Approvals & Build"
+  description="Answers to common questions about designing, engineering, approving and building a home in Adelaide with United Engineering Consultants."
+>
+  <PageHero
+    title="Frequently asked questions"
+    image="/images/s2.jpg"
+    crumb="FAQs"
+  >
+    <p class="lead">Building a home comes with plenty of questions. Here are answers to the ones we hear most. If yours isn’t here, chat to us.</p>
+  </PageHero>
+
+  <Section num="01" title="Working with us">
+    <div class="faq">
+      <FaqItem question="What does United Engineering Consultants do?" open>
+        <p>We design, engineer, get approval for and build homes across Adelaide. Clients can use us for the whole journey or for specific services like plans or engineering.</p>
+      </FaqItem>
+      <FaqItem question="Are you a licensed builder?">
+        <p>Yes. Our Building Work Contractor’s Licence number is <Licence />. You can check any SA builder’s licence on the Consumer and Business Services website.</p>
+      </FaqItem>
+      <FaqItem question="Which areas do you work in?">
+        <p><Placeholder>[SERVICE AREA]</Placeholder>.</p>
+      </FaqItem>
+      <FaqItem question="Is the initial consultation free?">
+        <p><Placeholder>[CLIENT TO CONFIRM.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Can I use you for design or engineering only?">
+        <p>Yes. Builders, owner-builders and developers can engage us for design, drafting and engineering on their own.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <Section num="02" title="Design and engineering" alt>
+    <div class="faq">
+      <FaqItem question="Why do I need a soil test?">
+        <p>Many Adelaide sites have reactive clay soils that move with changes in moisture. A soil report classifies your site so your footings can be designed to suit.</p>
+      </FaqItem>
+      <FaqItem question="Can you design a home for a sloping block?">
+        <p>Yes. Our engineers design footings, retaining walls and drainage for sloping sites.</p>
+      </FaqItem>
+      <FaqItem question="Are you architects?">
+        <p><Placeholder>[CLIENT TO CONFIRM. If no registered architect: "We’re building designers and engineers. In SA, only people registered with the Architectural Practice Board can use the title architect."]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <Section num="03" title="Approvals">
+    <div class="faq">
+      <FaqItem question="What approvals do I need to build in SA?">
+        <p>Most building work needs Development Approval, which may involve Planning Consent, Building Consent and, if you’re changing boundaries, Land Division Consent. We’ll work out what your project needs.</p>
+      </FaqItem>
+      <FaqItem question="Do you handle council for me?">
+        <p>Yes. We prepare, lodge and manage your applications.</p>
+      </FaqItem>
+      <FaqItem question="Can I rent out a granny flat in SA?">
+        <p>Since November 2023, granny flats in SA can be rented to anyone, not just family, according to PlanSA.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <Section num="04" title="Costs and contracts" alt>
+    <div class="faq">
+      <FaqItem question="How much will my home cost?">
+        <p>Every home is different. We’ll talk about your budget at your first consultation, then give you a final quote based on detailed plans before you sign a building contract.</p>
+      </FaqItem>
+      <FaqItem question="How do you handle variations?">
+        <p>Our final quote is based on detailed drawings, engineering and your selections, which helps reduce surprises. Any changes are set out and agreed with you in writing before the work is done. <Placeholder>[CLIENT TO CONFIRM: variation process.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Do I get a cooling-off period?">
+        <p>Yes. Under SA law, domestic building contracts have a cooling-off period of five clear business days.</p>
+      </FaqItem>
+      <FaqItem question="What is building indemnity insurance?">
+        <p>It protects you if your builder can’t complete the work or fix defects because they’ve died, disappeared or become insolvent, or if defective work needs fixing. In SA, builders must arrange it for building work of $20,000 or more that needs council approval.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <Section num="05" title="After handover">
+    <div class="faq">
+      <FaqItem question="What happens if something goes wrong after I move in?">
+        <p><Placeholder>[CLIENT TO CONFIRM: maintenance period and how to report issues.]</Placeholder> Statutory warranties also apply under SA law.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Still have questions?">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Chat to us</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

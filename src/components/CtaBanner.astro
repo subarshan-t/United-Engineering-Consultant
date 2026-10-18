@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  image?: string;
+}
+
+const { title, image = '/images/cta.jpg' } = Astro.props;
+---
+<section class="cta">
+  <div class="cta-img"><img src={image} alt="" loading="lazy" /></div>
+  <div class="cta-shade"></div>
+  <div class="wrap cta-inner">
+    <div class="cta-copy">
+      <h2 class="serif">{title}</h2>
+      <slot name="text" />
+    </div>
+    <div class="cta-btns"><slot /></div>
+  </div>
+</section>

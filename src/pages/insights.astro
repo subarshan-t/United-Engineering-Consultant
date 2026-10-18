@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Section from '../components/Section.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import ArrowLink from '../components/ArrowLink.astro';
+import Placeholder from '../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Home Building & Approval Insights Adelaide | UEC"
+  description="Straight-talking guides on designing, engineering, approving and building homes in South Australia from the UEC team."
+>
+  <PageHero
+    title="Straight answers for Adelaide homeowners"
+    image="/images/s4.jpg"
+    crumb="Insights"
+  >
+    <p class="lead">Building, renovating or developing in South Australia comes with a lot of questions. Here, our team shares practical, plain-English advice on design, engineering, approvals and construction, so you can make better decisions about your home.</p>
+  </PageHero>
+
+  <Section num="01" title="Browse by topic">
+    <ul class="dlist">
+      <li>Designing your home</li>
+      <li>Engineering and footings</li>
+      <li>Approvals in SA</li>
+      <li>Knockdown rebuilds</li>
+      <li>Granny flats and development</li>
+      <li>Building with confidence</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Latest articles" alt>
+    <p><Placeholder>[ARTICLE LISTING: pulls in the latest posts automatically.]</Placeholder></p>
+  </Section>
+
+  <Section num="03" title="Stay in the loop">
+    <p>Get new guides and advice straight to your inbox.</p>
+    <div class="actions">
+      <ArrowLink class="btn btn-navy" href="/contact/">Subscribe</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Suggested first articles" alt>
+    <p>These topics came out of our customer research. They answer the questions and worries Adelaide home buyers raise most often, and they support the service pages above.</p>
+    <ul class="dlist">
+      <li>How Development Approval works in South Australia: Planning Consent, Building Consent and what comes first</li>
+      <li>Knockdown rebuild or renovate? How to decide for your Adelaide home</li>
+      <li>Can I rent out my granny flat in SA? What changed in 2023</li>
+      <li>What does "fixed price" really mean in a building contract?</li>
+      <li>Reactive clay soils in Adelaide: what your soil report means for your footings</li>
+      <li>How to check a builder’s licence and insurance in South Australia</li>
+      <li>Do I need council approval for a retaining wall in SA?</li>
+      <li>Can I subdivide my block in Adelaide? What to check first</li>
+      <li>Your rights under a domestic building contract in SA</li>
+      <li>Choosing selections without blowing your budget</li>
+    </ul>
+  </Section>
+
+  <CtaBanner title="Ready to start your project?">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a Quote</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

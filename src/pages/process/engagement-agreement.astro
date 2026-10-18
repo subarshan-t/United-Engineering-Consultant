@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Engagement Agreement | Design & Approvals Stage | UEC"
+  description="Once you accept your fee proposal, an engagement agreement confirms the design, engineering and approvals work UEC will do for your home."
+>
+  <PageHero
+    title="Step 3: Engagement agreement"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Engagement Agreement"
+    tabs="process"
+  >
+    <p class="lead">Once you’re happy with your fee proposal, we formalise it with an engagement agreement. This confirms the design, engineering and approvals work we’ll do for you, the fees and how we’ll work together.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What the engagement agreement covers">
+    <p><Placeholder>[CLIENT TO CONFIRM: engagement agreement terms, including payment stages and ownership of plans.]</Placeholder></p>
+    <ul class="dlist">
+      <li>The services we’ll provide</li>
+      <li>Fees and payment stages</li>
+      <li>What we need from you, such as site information and decisions</li>
+      <li>Timeframes</li>
+      <li>What happens if the scope changes</li>
+      <li>Who owns the plans</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="What happens during this stage" alt>
+    <p>Once the agreement is signed, the design journey begins:</p>
+    <ul class="dlist">
+      <li>Concept design and refinement</li>
+      <li>Planning drawings</li>
+      <li>Engineering, including your soil report and footing design</li>
+      <li>Construction drawings</li>
+      <li>Interior design and selections, if included</li>
+      <li>Lodgement and management of your approvals</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/residential-design/">Residential design</ArrowLink>
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Structural engineering</ArrowLink>
+      <ArrowLink class="tlink" href="/services/planning-approvals/">Planning and approvals</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="What happens next">
+    <p>When your plans are detailed enough, we prepare your final quote to build.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/final-quote/">Next step: Final quote</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your design journey">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

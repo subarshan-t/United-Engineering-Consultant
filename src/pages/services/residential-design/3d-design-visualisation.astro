@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="3D House Design & Visualisation Adelaide | UEC"
+  description="See your new home, renovation or extension in 3D before it’s built. 3D design and visualisation from UEC helps you decide with confidence."
+>
+  <PageHero
+    title="See your home before it’s built"
+    image="/images/s1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Residential Designs', href: '/services/residential-design/' }]}
+    crumb="3D Design & Visualisation"
+    tabs="residentialDesign"
+  >
+    <p class="lead">Floor plans are hard to read if you don’t look at them every day. It’s tough to imagine how high a ceiling will feel, how much light a room will get or how the kitchen will look from the lounge. 3D design takes the guesswork out.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What 3D visualisation shows you">
+    <p><Placeholder>[CLIENT TO CONFIRM: which 3D outputs they offer, e.g. still renders, walkthrough videos, virtual reality.]</Placeholder></p>
+    <ul class="dlist">
+      <li>The outside of your home from different angles, including colours and materials</li>
+      <li>How your home sits on your block and next to the street</li>
+      <li>Room layouts, proportions and how spaces flow together</li>
+      <li>Kitchen, bathroom and living areas in detail</li>
+      <li>How natural light moves through the home at different times of day</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why it’s worth it" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Make decisions with confidence</h3>
+        <p>It’s much easier to say yes to a design when you can see it. 3D helps you spot what you love and what you’d change.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Catch changes early</h3>
+        <p>Changing a window or moving a wall in a 3D model is quick. Changing it on site is slow and expensive.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Get everyone on the same page</h3>
+        <p>3D images help partners, family members and even neighbours understand what’s being built.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Choose finishes with confidence</h3>
+        <p>Try different colours, cladding, benchtops and flooring before you commit.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Part of your design journey">
+    <p>3D visualisation sits alongside our concept design and interior design work, so you can see and refine your home as the design develops.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/residential-design/concept-design/">Concept design</ArrowLink>
+      <ArrowLink class="tlink" href="/services/interior-design/">Interior design</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Is 3D design included in every project?">
+        <p><Placeholder>[CLIENT TO CONFIRM: included as standard or an optional extra.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Can you create 3D images for a renovation?">
+        <p>Yes. 3D is a great way to see how an extension or renovation will look alongside your existing home.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="See your dream home in 3D">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Structural Design for Homes & Renovations Adelaide"
+  description="Structural design for Adelaide homes, renovations and extensions: beams, bracing, frames, wall removal and second storeys. Engineered by UEC."
+>
+  <PageHero
+    title="Structural design that makes your ideas possible"
+    image="/images/s3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Structural Engineering', href: '/services/structural-engineering/' }]}
+    crumb="Structural Design"
+    tabs="structuralEngineering"
+  >
+    <p class="lead">Want an open-plan living area? A second storey? A wall of glass facing the garden? Most big design ideas come down to one question: how will it be supported? Structural design is how we answer it safely and cost-effectively.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to an engineer</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we design">
+    <p><Placeholder>[CLIENT TO CONFIRM: services offered.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Beams and lintels for openings and open-plan spaces</li>
+      <li>Load-bearing wall removal</li>
+      <li>Timber and steel framing</li>
+      <li>Bracing and tie-downs to resist wind loads</li>
+      <li>Roof structures</li>
+      <li>Second-storey additions</li>
+      <li>Decks, verandahs, pergolas and carports</li>
+      <li>Structural repairs and strengthening</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="For new homes" alt>
+    <p>Structural design is part of our complete new home engineering package, prepared alongside your design and construction drawings.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/new-home-engineering/">New home engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="For renovations and extensions">
+    <p>Renovations often mean working with an older structure that wasn’t designed for what you want to do. We look at how your existing home is built and design changes that work with it.</p>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Removing a wall</h3>
+        <p>Before you take out a wall, you need to know whether it’s holding anything up. If it is, we design a beam and supports to carry the load safely.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Adding a second storey</h3>
+        <p>A second storey adds new loads to your existing walls and footings. We assess whether they can carry it and design what’s needed if they can’t.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Why it pays to get it right" alt>
+    <p>Under-designed structures can sag, crack or fail. Over-designed structures waste money. Good structural design finds the right balance for your home.</p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can I remove a wall without an engineer?">
+        <p>If the wall is load-bearing, you’ll need structural design, and in most cases Building Consent, before removing it. Don’t remove a wall until you know what it’s doing.</p>
+      </FaqItem>
+      <FaqItem question="Can you work on older homes?">
+        <p>Yes. We’ll assess the existing structure and design changes to suit it.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Bring your ideas to life, safely">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to an engineer</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Approvals & Construction Stage | UEC Adelaide"
+  description="Once your contract is signed, UEC finalises your approvals and builds your home, keeping you updated at every stage of construction."
+>
+  <PageHero
+    title="Step 6: Processing, approvals and construction"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Processing"
+    tabs="process"
+  >
+    <p class="lead">This is where your plans become a home. Once your contract is signed, we finalise any outstanding approvals, arrange your building indemnity insurance and get construction underway.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Before construction">
+    <ul class="dlist">
+      <li>Final approvals and Development Approval confirmed</li>
+      <li>Building indemnity insurance certificate issued</li>
+      <li>Site preparation and, for knockdowns, demolition</li>
+      <li>Trades and materials scheduled</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Construction stages" alt>
+    <p>Most homes are built in a series of stages. Typically:</p>
+    <p><Placeholder>[CLIENT TO CONFIRM: build stages and payment milestones used in their contracts.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Site works and footings</li>
+      <li>Slab</li>
+      <li>Frame</li>
+      <li>Lock-up</li>
+      <li>Fixing</li>
+      <li>Practical completion</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Keeping you informed">
+    <p>You’ll have a main point of contact during construction who keeps you updated on progress and lets you know about any decisions needed. <Placeholder>[CLIENT TO CONFIRM: update frequency and method, e.g. weekly updates, site meetings, photos.]</Placeholder></p>
+  </Section>
+
+  <Section num="04" title="Quality checks" alt>
+    <p><Placeholder>[CLIENT TO CONFIRM: quality inspection points during construction, e.g. engineer inspections of footings and frame.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="What happens next">
+    <p>When construction is nearly complete, we’ll book your pre-handover inspection.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/pre-handover/">Next step: Pre handover</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your build journey">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

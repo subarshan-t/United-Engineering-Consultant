@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Fee Proposal for Home Design & Approvals | UEC"
+  description="After your consultation, UEC prepares a clear fee proposal setting out design, engineering and approvals work and costs for your project."
+>
+  <PageHero
+    title="Step 2: Fee proposal"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Fee Proposal"
+    tabs="process"
+  >
+    <p class="lead">After your consultation, we prepare a fee proposal. It sets out exactly what’s involved in designing, engineering and getting approval for your project, and what it’ll cost. No vague estimates. Just a clear outline of the work and the fees.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s in your fee proposal">
+    <p><Placeholder>[CLIENT TO CONFIRM: fee proposal contents and whether any fees are credited towards the build.]</Placeholder></p>
+    <ul class="dlist">
+      <li>The scope of design, drafting and engineering work</li>
+      <li>The approvals your project is likely to need</li>
+      <li>Reports and consultants required, such as a soil report or land survey</li>
+      <li>Our fees and how they’re structured</li>
+      <li>Expected authority and application fees</li>
+      <li>An estimated timeframe for the design and approvals stage</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why we price design separately" alt>
+    <p>Designing and engineering a home properly takes time and expertise. By pricing this stage on its own, you get a clear commitment for the work needed to get your plans approved, before you commit to building. And it means your final build quote is based on real plans.</p>
+  </Section>
+
+  <Section num="03" title="Questions are welcome">
+    <p>If anything in your fee proposal isn’t clear, ask us. We’d rather you understand exactly what you’re agreeing to.</p>
+  </Section>
+
+  <Section num="04" title="What happens next" alt>
+    <p>If you’re happy with the fee proposal, we’ll send you an engagement agreement to get started.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/engagement-agreement/">Next step: Engagement agreement</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your project">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

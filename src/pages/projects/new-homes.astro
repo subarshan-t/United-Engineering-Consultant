@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="New Home Builders Adelaide | Designed & Engineered | UEC"
+  description="Building a new home in Adelaide? UEC designs, engineers, gets approval for and builds new homes, with one team from first sketch to handover."
+>
+  <PageHero
+    title="New homes, designed and built around you"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Projects', href: '/projects/' }]}
+    crumb="New Homes"
+    tabs="projects"
+  >
+    <p class="lead">You’ve found your block. Now you want a home that makes the most of it. We design, engineer, approve and build new homes across Adelaide, with one team taking care of everything from the first sketch to the final key.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Why build your new home with us">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>A design that fits your block</h3>
+        <p>We don’t squeeze a standard plan onto your land. We design around your block’s size, orientation, slope and planning rules.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Engineering done right</h3>
+        <p>Footings, structure and drainage designed for your soil and site, by our own engineering team.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>A real price before you commit</h3>
+        <p>We design and engineer first, then give you a final quote based on detailed plans.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>One point of contact</h3>
+        <p>One team, one conversation, one business responsible for the result.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="02" title="What building a new home with us looks like" alt>
+    <ul class="dlist">
+      <li>Initial consultation and site review</li>
+      <li>Fee proposal for design and approvals</li>
+      <li>Concept design, planning drawings and 3D visuals</li>
+      <li>Engineering and construction drawings</li>
+      <li>Planning Consent, Building Consent and Development Approval</li>
+      <li>Final quote and building contract</li>
+      <li>Construction with regular updates</li>
+      <li>Pre-handover inspection and handover</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/">See our full process</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="New home projects">
+    <p><Placeholder>[PROJECT GALLERY: completed new home projects with photos, suburb and short description.]</Placeholder></p>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="How long does it take to build a new home?">
+        <p>It depends on the size and complexity of the home, approvals and weather. We’ll give you an estimated timeline once your design is complete. <Placeholder>[CLIENT TO CONFIRM: typical build timeframes, if they’d like to publish them.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Do you build on sloping blocks?">
+        <p>Yes. Our engineering team designs footings, retaining walls and drainage to suit sloping sites.</p>
+      </FaqItem>
+      <FaqItem question="Which areas do you build in?">
+        <p><Placeholder>[CLIENT TO CONFIRM: service area, e.g. metropolitan Adelaide.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Let’s build your new home">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

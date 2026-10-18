@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Final Build Quote Based on Detailed Plans | UEC"
+  description="Know your numbers before you sign. UEC’s final build quote is based on detailed drawings, engineering and your selections."
+>
+  <PageHero
+    title="Step 4: Final quote, based on real plans"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Final Quote"
+    tabs="process"
+  >
+    <p class="lead">Many people sign a building contract based on a price that turns out to be just the starting point. Then the variations arrive. We do it the other way around. Your final quote is prepared from detailed drawings and engineering, so it’s a much more accurate reflection of what your home will cost.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What your final quote is based on">
+    <ul class="dlist">
+      <li>Detailed construction drawings</li>
+      <li>Structural engineering and footing design</li>
+      <li>Site and drainage plans</li>
+      <li>Your selections of materials and finishes</li>
+      <li>Approval conditions</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="What your quote includes" alt>
+    <p><Placeholder>[CLIENT TO CONFIRM: what’s included, e.g. site costs, connections, landscaping, driveways, and what’s excluded. List exclusions clearly.]</Placeholder></p>
+  </Section>
+
+  <Section num="03" title="Why this matters">
+    <p>Variations are changes to the price during construction. Some are unavoidable, like changes you ask for. But many come from things that weren’t known or documented when the contract was signed. The more detail we have before we quote, the fewer surprises there should be later.</p>
+  </Section>
+
+  <Section num="04" title="Take your time" alt>
+    <p>Your final quote is a big decision. We’ll walk you through it line by line and answer every question before you commit.</p>
+  </Section>
+
+  <Section num="05" title="What happens next">
+    <p>If you’re happy with your quote, we’ll prepare your building contract.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/building-contract/">Next step: Agreement</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Know your numbers before you sign">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

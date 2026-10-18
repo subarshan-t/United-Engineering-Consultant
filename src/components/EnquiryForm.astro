@@ -1,0 +1,47 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+
+const projectTypes = [
+  'New home',
+  'Extension or addition',
+  'Renovation',
+  'Knockdown & Rebuild',
+  'Secondary dwelling',
+  'Development or subdivision',
+  'Plans or engineering only',
+  'Something else',
+];
+---
+<div class="form-card">
+  <form class="enquiry" id="enquiry" action="" method="post" enctype="multipart/form-data" data-endpoint={site.formEndpoint} novalidate>
+    <div class="fields">
+      <label>NAME<input name="name" type="text" autocomplete="name" required /></label>
+      <label>EMAIL<input name="email" type="email" autocomplete="email" required /></label>
+    </div>
+    <div class="fields">
+      <label>PHONE<input name="phone" type="tel" autocomplete="tel" required /></label>
+      <label>PROJECT ADDRESS / SUBURB<input name="address" type="text" autocomplete="street-address" /></label>
+    </div>
+    <label>PROJECT TYPE<span class="select">
+      <select name="project_type">
+        <option value="">Select a project type</option>
+        {projectTypes.map((t) => <option>{t}</option>)}
+      </select>
+    </span></label>
+    <label>MESSAGE<textarea name="message" rows="4"></textarea></label>
+    <label class="upload">
+      <Icon name="upload" />
+      <span><strong>Upload drawings / photos</strong><small>PDF, JPG or PNG</small><em class="upload-name" data-upload-name></em></span>
+      <input type="file" name="attachments" accept=".pdf,.jpg,.jpeg,.png" multiple />
+    </label>
+    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <p class="form-error" id="form-error" hidden>Please fill in your name, email and phone.</p>
+    <button class="btn btn-navy btn-lg btn-block" type="submit">Request a Quote <span class="arr" aria-hidden="true">→</span></button>
+  </form>
+  <div class="thanks" id="thanks" hidden>
+    <span class="tick">✓</span>
+    <h2 class="serif">Thank you.</h2>
+    <p>We’ve received your enquiry and will be in touch within one business day.</p>
+  </div>
+</div>

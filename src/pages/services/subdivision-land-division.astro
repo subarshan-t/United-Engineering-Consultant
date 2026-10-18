@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Subdivision & Land Division Adelaide | UEC"
+  description="Thinking of subdividing in Adelaide? UEC helps with feasibility, design, engineering, Land Division Consent and building your new homes."
+>
+  <PageHero
+    title="Unlock the potential of your land"
+    image="/images/p3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Subdivision & Land Division"
+  >
+    <p class="lead">Got a big block? An older home on a wide lot? Subdividing can create room for new homes, extra income or a way to help family into their own place. We help you work out what your land can do, then design, approve and build it.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your land</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What is land division?">
+    <p>In South Australia, land division means creating, moving or removing property boundaries. That includes splitting one block into two or more, amalgamating allotments or moving a boundary. According to PlanSA, land division needs Land Division Consent, and if land division consent is required, Planning Consent must be included too.</p>
+  </Section>
+
+  <Section num="02" title="Common types of subdivision" alt>
+    <p><Placeholder>[CLIENT TO CONFIRM: the types of land division they handle.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Splitting one block into two (often called a "two for one" or battle-axe subdivision)</li>
+      <li>Knocking down one home and building two or more</li>
+      <li>Community title and strata developments</li>
+      <li>Subdividing to keep your existing home and build on the back</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="How the process works">
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>1. Feasibility</h3>
+        <p>We look at your block’s size, zone, frontage, services and the rules in the Planning and Design Code to see what’s possible.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>2. Design</h3>
+        <p>We design the new allotments and homes together, so the layout works for both.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>3. Surveying and application</h3>
+        <p>A licensed land surveyor prepares the plan of division. The application is lodged and assessed, with state agencies such as SA Water reviewing their requirements.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>4. Approval and conditions</h3>
+        <p>Once the conditions are met, a Certificate of Approval is issued.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>5. New titles</h3>
+        <p>The plan is lodged with Land Services SA and new titles are issued for each allotment.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">06</span>
+        <h3>6. Build</h3>
+        <p>We build your new homes, so you have one team from feasibility to handover.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="04" title="Why subdivide with us" alt>
+    <ul class="dlist">
+      <li>Design, engineering and building under one roof</li>
+      <li>We plan your allotments and homes together</li>
+      <li>We manage the approvals and authority requirements</li>
+      <li>You get realistic advice about costs before you commit</li>
+    </ul>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can I subdivide my block?">
+        <p>It depends on your zone, block size, frontage and other rules. Minimum sizes vary across Adelaide. We’ll check your property and give you straight advice.</p>
+      </FaqItem>
+      <FaqItem question="How long does subdivision take?">
+        <p>Land division involves several steps and authorities, so it takes time. We’ll give you a realistic timeline for your site.</p>
+      </FaqItem>
+      <FaqItem question="Do I need to demolish my existing home?">
+        <p>Not always. Some blocks can be subdivided while keeping the existing house.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Find out what your land can do">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your land</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

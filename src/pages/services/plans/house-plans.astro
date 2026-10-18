@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="House Plans Adelaide | Custom Home & Extension Plans"
+  description="Custom house plans for new homes, extensions and granny flats in Adelaide. Designed to suit your block and ready for council approval."
+>
+  <PageHero
+    title="House plans designed for your block, your budget and your life"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Plans', href: '/services/plans/' }]}
+    crumb="House Plans"
+    tabs="plans"
+  >
+    <p class="lead">Your house plans are the foundation of your whole project. They set the layout, the look and much of the cost of your home. We prepare custom house plans that suit your land, meet the planning rules and can be built on budget.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s included in a set of house plans">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Site plan showing your home’s position on the block</li>
+      <li>Floor plans with room layouts and dimensions</li>
+      <li>Elevations showing each side of the home</li>
+      <li>Sections showing heights and levels</li>
+      <li>Roof plan</li>
+      <li>Window and door schedules</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Plans for every type of project" alt>
+    <ul class="dlist">
+      <li>New homes</li>
+      <li>Knockdown rebuilds</li>
+      <li>Extensions and second storeys</li>
+      <li>Granny flats and secondary dwellings</li>
+      <li>Two or more homes on one block</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Designed with engineering and construction in mind">
+    <p>Our house plans are prepared by a team that also engineers and builds homes. That means your plans are practical, buildable and coordinated with the structural work from the start.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/residential-design/">Residential design</ArrowLink>
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Structural engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="From plans to approval" alt>
+    <p>House plans are the starting point for your planning and building applications. We can prepare the full set of documents and manage your approvals too.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/planning-approvals/">Planning and approvals</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can I buy a standard plan?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether they offer standard plans or custom only.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="How much do house plans cost?">
+        <p>It depends on the size and complexity of your project. We’ll give you a clear fee proposal before we start.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your house plans">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

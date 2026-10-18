@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactBlock from '../components/ContactBlock.astro';
+import ArrowLink from '../components/ArrowLink.astro';
+import Icon from '../components/Icon.astro';
+import Licence from '../components/Licence.astro';
+import Placeholder from '../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Home Design, Engineering & Builders Adelaide | UEC"
+  description="Design, engineering, approvals and construction under one roof. United Engineering Consultants builds homes across Adelaide. Book a consultation."
+  home
+>
+  <section class="hero">
+    <div class="hero-img"><img src="/images/hero.jpg" alt="Modern two-storey home at dusk in Adelaide" /></div>
+    <div class="hero-shade"></div>
+    <div class="hero-mob"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <div class="kicker">RESIDENTIAL <i>|</i> STRUCTURAL <i>|</i> CIVIL <i>|</i> APPROVALS</div>
+        <h1 class="serif">Engineering &amp; Design Solutions for South Australian Homes</h1>
+        <p class="lead">Residential design, structural engineering and building approvals, delivered with practical advice and clear documentation.</p>
+        <div class="btn-row">
+          <ArrowLink class="btn btn-white btn-lg" href="/contact/">Request a Quote</ArrowLink>
+          <a class="btn btn-outline-light btn-lg" href="/projects/">View Our Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="wrap strip-grid">
+      <a class="strip-item" href="/services/residential-design/"><Icon name="home" /><span>Residential Design</span></a>
+      <a class="strip-item" href="/services/structural-engineering/"><Icon name="gear" /><span>Structural Engineering</span></a>
+      <a class="strip-item" href="/services/planning-approvals/"><Icon name="document" /><span>Approvals &amp; Documentation</span></a>
+      <a class="strip-item" href="/about/"><Icon name="pin" /><span>Adelaide, South Australia</span></a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap sec-grid">
+      <h2 class="serif h2-lg">Building a home shouldn’t feel like managing five different companies</h2>
+      <div class="sec-body">
+        <p>Most people building or renovating in Adelaide end up juggling a designer, a drafter, an engineer, a council and a builder. Each one waits on the next. Plans bounce back and forth. Costs creep up. And when something goes wrong, nobody’s quite sure whose job it was to fix it.</p>
+        <p class="strong">We do it differently. Our team designs your home, engineers it, takes it through council approvals and builds it. You deal with one business that owns the whole result, from the first conversation to the day you get the keys.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="sec-top">
+        <div>
+          <div class="eyebrow">OUR SERVICES</div>
+          <h2 class="serif h2-lg">Engineering, design and approvals under one roof</h2>
+        </div>
+        <a class="btn btn-outline-dark" href="/services/">Explore all services</a>
+      </div>
+      <div class="svc4">
+        <a class="svc-card" href="/services/residential-design/">
+          <div class="ic-img"><img src="/images/s1.jpg" alt="" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3><Icon name="home" /><span>Residential Design</span></h3>
+            <ul>
+              <li>New homes</li>
+              <li>Extensions &amp; additions</li>
+              <li>Renovations</li>
+              <li>Secondary dwellings</li>
+              <li>3D design &amp; visualisation</li>
+            </ul>
+            <span class="svc-more">Learn more <span class="arr" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="svc-card" href="/services/structural-engineering/">
+          <div class="ic-img"><img src="/images/s3.jpg" alt="" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3><Icon name="gear" /><span>Structural Engineering</span></h3>
+            <ul>
+              <li>Structural design</li>
+              <li>Footings &amp; slabs</li>
+              <li>Beams &amp; columns</li>
+              <li>Retaining walls</li>
+              <li>Load-bearing wall removal</li>
+              <li>Structural assessments</li>
+            </ul>
+            <span class="svc-more">Learn more <span class="arr" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="svc-card" href="/services/structural-engineering/site-drainage-plans/">
+          <div class="ic-img"><img src="/images/p3.jpg" alt="" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3><Icon name="bridge" /><span>Civil Engineering</span></h3>
+            <ul>
+              <li>Stormwater design</li>
+              <li>Site drainage</li>
+              <li>Site works</li>
+              <li>Subdivision &amp; land division</li>
+              <li>Civil documentation</li>
+            </ul>
+            <span class="svc-more">Learn more <span class="arr" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="svc-card" href="/services/planning-approvals/">
+          <div class="ic-img"><img src="/images/s4.jpg" alt="" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3><Icon name="document" /><span>Approvals &amp; Documentation</span></h3>
+            <ul>
+              <li>Development applications</li>
+              <li>Building approval documentation</li>
+              <li>Engineering certification</li>
+              <li>Council coordination</li>
+              <li>Advice and consultation</li>
+            </ul>
+            <span class="svc-more">Learn more <span class="arr" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">START HERE</div>
+      <h2 class="serif h2-lg">What would you like to build?</h2>
+      <div class="img-cards c4">
+        <div class="img-card">
+          <div class="ic-img"><img src="/images/s1.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-body">
+            <h3>A new home or knockdown rebuild</h3>
+            <p>Whether you’ve got a vacant block or an old house that’s past its best, we’ll design a home that fits your land, your budget and the way you live.</p>
+            <div class="card-links">
+              <ArrowLink href="/projects/new-homes/">New homes</ArrowLink>
+              <ArrowLink href="/projects/knockdown-rebuild/">Knockdown &amp; Rebuild</ArrowLink>
+            </div>
+          </div>
+        </div>
+        <div class="img-card">
+          <div class="ic-img"><img src="/images/s2.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-body">
+            <h3>A renovation or extension</h3>
+            <p>More space, more light, a better layout. We’ll design and engineer changes that work with your existing home and handle the approvals too.</p>
+            <div class="card-links">
+              <ArrowLink href="/projects/renovations-extensions/">Renovations and extensions</ArrowLink>
+            </div>
+          </div>
+        </div>
+        <div class="img-card">
+          <div class="ic-img"><img src="/images/p3.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-body">
+            <h3>A granny flat or small development</h3>
+            <p>Adding a secondary dwelling or splitting your block? We’ll show you what your land can do, then design, approve and build it.</p>
+            <div class="card-links">
+              <ArrowLink href="/projects/secondary-dwellings/">Secondary dwellings</ArrowLink>
+              <ArrowLink href="/projects/development-subdivision/">Development and subdivision</ArrowLink>
+            </div>
+          </div>
+        </div>
+        <div class="img-card">
+          <div class="ic-img"><img src="/images/s3.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-body">
+            <h3>Plans and engineering only</h3>
+            <p>Already have a builder? Builders, owner-builders and developers can use our design, drafting and engineering services on their own.</p>
+            <div class="card-links">
+              <ArrowLink href="/services/plans/">Plans</ArrowLink>
+              <ArrowLink href="/services/structural-engineering/">Structural engineering</ArrowLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="why-copy">
+      <div class="eyebrow light">WHY UNITED ENGINEERING CONSULTANTS</div>
+      <h2 class="serif h2-lg">Why Adelaide homeowners work with us</h2>
+      <ol class="why-list">
+        <li>
+          <span class="why-n">01</span>
+          <div>
+            <h3>One team, sketch to keys</h3>
+            <p>Your designer, engineer and builder work side by side, so your plans are buildable from day one. There’s no finger pointing and no information lost between consultants, just one team that’s responsible for getting it right.</p>
+          </div>
+        </li>
+        <li>
+          <span class="why-n">02</span>
+          <div>
+            <h3>Know your numbers before you sign</h3>
+            <p>We design and engineer your home first. Then we give you a final quote based on detailed drawings, not a rough estimate. That means fewer surprises once construction starts.</p>
+          </div>
+        </li>
+        <li>
+          <span class="why-n">03</span>
+          <div>
+            <h3>Engineering at the heart of every home</h3>
+            <p>Many Adelaide suburbs sit on reactive clay soils that swell when wet and shrink when dry. Getting the footings, structure and drainage right for your site is what keeps a home solid for decades. It’s where we start.</p>
+          </div>
+        </li>
+        <li>
+          <span class="why-n">04</span>
+          <div>
+            <h3>SA approvals, handled</h3>
+            <p>Planning Consent, Building Consent, Development Approval. We know the PlanSA system and we manage every step, so you don’t have to work it out on your own.</p>
+          </div>
+        </li>
+        <li>
+          <span class="why-n">05</span>
+          <div>
+            <h3>Straight answers, regular updates</h3>
+            <p>You’ll have one main contact who keeps you informed at every stage. <Placeholder>[CLIENT TO CONFIRM: how often clients receive updates, e.g. weekly, so we can state it here.]</Placeholder></p>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="why-img"><img src="/images/about.jpg" alt="" loading="lazy" /></div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-top">
+        <div>
+          <div class="eyebrow">HOW IT WORKS</div>
+          <h2 class="serif h2-lg">A clear path from enquiry to construction</h2>
+        </div>
+        <ArrowLink class="btn btn-navy" href="/process/">See our full process</ArrowLink>
+      </div>
+      <ol class="how5">
+        <li>
+          <span class="how-ico"><Icon name="document" /></span>
+          <span class="how-num">01</span>
+          <h3>Tell us about your project</h3>
+          <p>Submit your drawings, address and requirements.</p>
+        </li>
+        <li>
+          <span class="how-ico"><Icon name="users" /></span>
+          <span class="how-num">02</span>
+          <h3>Initial consultation</h3>
+          <p>We review your project and explain what is required.</p>
+        </li>
+        <li>
+          <span class="how-ico"><Icon name="clipboard-pen" /></span>
+          <span class="how-num">03</span>
+          <h3>Design &amp; documentation</h3>
+          <p>We prepare the required engineering and design documentation.</p>
+        </li>
+        <li>
+          <span class="how-ico"><Icon name="clipboard-check" /></span>
+          <span class="how-num">04</span>
+          <h3>Approvals &amp; coordination</h3>
+          <p>We coordinate documents for council and approvals.</p>
+        </li>
+        <li>
+          <span class="how-ico"><Icon name="hardhat" /></span>
+          <span class="how-num">05</span>
+          <h3>Construction support</h3>
+          <p>We remain available during construction.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="sec-top">
+        <div>
+          <div class="eyebrow">FEATURED PROJECT</div>
+          <h2 class="serif h2-lg">Recent work across Adelaide</h2>
+        </div>
+        <ArrowLink class="tlink" href="/projects/">View all projects</ArrowLink>
+      </div>
+      <p class="note"><Placeholder>[SAMPLE PROJECT: replace with a real completed project, with the client’s permission. Include project name, suburb, project type, services provided, a short description and 3 to 5 high-quality photos.]</Placeholder></p>
+      <div class="feat">
+        <div class="feat-media">
+          <div class="feat-main"><img src="/images/p1.jpg" alt="Modern residential extension" loading="lazy" /></div>
+          <div class="feat-thumbs"><img src="/images/p2.jpg" alt="" loading="lazy" /><img src="/images/p3.jpg" alt="" loading="lazy" /><img src="/images/s1.jpg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="feat-body">
+          <h3 class="serif">Modern Residential Extension</h3>
+          <p class="feat-loc"><Icon name="pin" />Adelaide, SA</p>
+          <p class="feat-tags"><Icon name="gear" />Residential <i>|</i> Structural Engineering</p>
+          <p>Structural design for a rear extension incorporating new steel beams, altered openings and upgraded footings.</p>
+          <ArrowLink class="btn btn-navy" href="/projects/">View Project</ArrowLink>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="eyebrow">REVIEWS</div>
+        <h2 class="serif h2-lg"><em>What our clients say</em></h2>
+        <p class="note"><Placeholder>[CLIENT TESTIMONIALS: 2 to 3 genuine reviews with first name and suburb, e.g. from Google reviews. Do not publish placeholder or invented testimonials.]</Placeholder></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap sec-grid">
+      <div>
+        <h2 class="serif h2-lg">Building with confidence</h2>
+        <p class="sub">Building a home is one of the biggest investments you’ll make, so you deserve to know who you’re dealing with.</p>
+      </div>
+      <ul class="dlist">
+        <li>We’re a licensed SA building work contractor: licence <Licence />.</li>
+        <li>Building indemnity insurance is arranged for every home where it’s required. In SA, that’s building work of $20,000 or more that needs council approval.</li>
+        <li>Your home is designed and engineered by qualified professionals: <Placeholder>[TEAM QUALIFICATIONS]</Placeholder>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec contact-sec" id="quote">
+    <div class="wrap">
+      <ContactBlock title="Ready to start your project?" />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Retaining Wall Engineering & Approval Adelaide | UEC"
+  description="Engineered retaining walls for Adelaide homes. Design, approvals and construction advice for sloping blocks, cut and fill and boundary walls."
+>
+  <PageHero
+    title="Retaining walls engineered to hold their ground"
+    image="/images/s3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Structural Engineering', href: '/services/structural-engineering/' }]}
+    crumb="Retaining Walls"
+    tabs="structuralEngineering"
+  >
+    <p class="lead">Sloping blocks, cut and fill and level changes between neighbours all need retaining walls. A well-designed wall keeps soil in place for decades. A poorly designed one can lean, crack or fail, and fixing it can be expensive.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to an engineer</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="When do you need an engineered retaining wall?">
+    <p>Taller retaining walls, walls carrying extra loads like driveways, buildings or pools, and walls on or near boundaries all need careful design. We engineer retaining walls to suit your soil, height, drainage and what’s sitting above them.</p>
+  </Section>
+
+  <Section num="02" title="Do I need approval for a retaining wall in SA?" alt>
+    <p>According to the Legal Services Commission of SA, development approval generally isn’t needed if a retaining wall holds back a difference in ground level of one metre or less. Above that, approval is usually required.</p>
+    <p>There are a few catches:</p>
+    <p>We’ll check what applies to your site and take care of approvals if they’re needed.</p>
+    <ul class="dlist">
+      <li>If you’re building tiered walls, it’s the total difference in ground level that counts, not each wall on its own.</li>
+      <li>If a fence sits on top of the wall and the combined height is more than 2.1 metres from the lower side, approval is needed.</li>
+      <li>Your council may have extra requirements depending on your zone.</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/planning-approvals/">Planning and approvals</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="03" title="What we design">
+    <p><Placeholder>[CLIENT TO CONFIRM: wall types they design and/or build.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Concrete sleeper and steel post walls</li>
+      <li>Masonry block walls</li>
+      <li>Reinforced concrete walls</li>
+      <li>Boundary retaining walls</li>
+      <li>Walls supporting driveways, homes and pools</li>
+      <li>Drainage behind the wall, which is critical to how long it lasts</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Retaining walls and your neighbours" alt>
+    <p>In SA, responsibility for a retaining wall generally depends on who changed the natural ground level. If both neighbours benefit, costs can be shared. If your work affects the stability of neighbouring land, you may need to give formal notice before starting. We’ll help you understand what applies to your project.</p>
+  </Section>
+
+  <Section num="05" title="Designed with your site plan">
+    <p>Retaining walls are designed alongside your site levels, footings and drainage, so everything works together.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/site-drainage-plans/">Site and drainage plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="06" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="How high can I build a retaining wall without approval?">
+        <p>Generally up to a one-metre difference in ground level, but check with us or your council first, as other rules may apply.</p>
+      </FaqItem>
+      <FaqItem question="Why does drainage behind a retaining wall matter?">
+        <p>Water building up behind a wall adds pressure. Without proper drainage, even a well-built wall can fail.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your retaining wall designed properly">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to an engineer</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

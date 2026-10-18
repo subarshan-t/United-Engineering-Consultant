@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Footing & Slab Design Adelaide | Reactive Soils | UEC"
+  description="Footing and slab design for Adelaide homes, based on your soil report and AS 2870 site classification. Engineered for reactive clay soils."
+>
+  <PageHero
+    title="Footings and foundations designed for your ground"
+    image="/images/s3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Structural Engineering', href: '/services/structural-engineering/' }]}
+    crumb="Footings & Foundations"
+    tabs="structuralEngineering"
+  >
+    <p class="lead">Cracks in walls, doors that won’t close and uneven floors often trace back to one thing: footings that weren’t right for the soil. In Adelaide, where reactive clays are common, your foundation design is one of the most important decisions in your whole build.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to an engineer</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Why your soil matters">
+    <p>Reactive clay soils swell as they take on moisture and shrink as they dry out. That movement pushes and pulls on anything built on top. Your footings need to be designed to handle the amount of movement expected on your site.</p>
+    <p>Before we design your footings, your site needs a soil report. A geotechnical engineer tests the soil and gives your site a classification under AS 2870, the Australian Standard for residential slabs and footings.</p>
+  </Section>
+
+  <Section num="02" title="Site classes at a glance" alt>
+    <ul class="dlist">
+      <li>Class A: little or no ground movement, like sand or rock</li>
+      <li>Class S: slightly reactive</li>
+      <li>Class M: moderately reactive</li>
+      <li>Class H1 and H2: highly reactive</li>
+      <li>Class E: extremely reactive</li>
+      <li>Class P: problem sites, such as those with fill, soft soils or other issues needing special design</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="What we design">
+    <p><Placeholder>[CLIENT TO CONFIRM: footing types they typically design.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Waffle pod slabs</li>
+      <li>Stiffened raft slabs</li>
+      <li>Strip and pad footings</li>
+      <li>Bored piers and pier and beam systems for difficult sites</li>
+      <li>Footings for extensions that need to work alongside existing foundations</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Things that affect your footings" alt>
+    <p>That’s why we design footings together with your site and drainage plans. Good drainage helps keep soil moisture stable, which helps your footings do their job.</p>
+    <ul class="dlist">
+      <li>Your soil classification</li>
+      <li>Trees on or near your site, which can dry out the soil</li>
+      <li>Slope, cut and fill</li>
+      <li>Existing footings or old structures on knockdown sites</li>
+      <li>Drainage around the home</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/site-drainage-plans/">Site and drainage plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="My site is classed as H or E. Can I still build?">
+        <p>Yes. Highly reactive sites are common in Adelaide. They need stronger footing designs, which can add cost, so it’s worth knowing your site class early.</p>
+      </FaqItem>
+      <FaqItem question="Can footings be designed for an extension on an older home?">
+        <p>Yes. We’ll design footings for your extension that work alongside your existing foundations.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your foundations right from the start">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to an engineer</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

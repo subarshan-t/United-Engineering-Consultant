@@ -1,0 +1,6 @@
+---
+// Building Work Contractor's Licence number from site.ts, or a placeholder until supplied.
+import Placeholder from './Placeholder.astro';
+import { site, placeholders } from '../data/site';
+---
+{site.licence ?? <Placeholder>{placeholders.licence}</Placeholder>}

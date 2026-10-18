@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Your Building Contract | What to Expect | UEC"
+  description="Once you accept your final quote, you sign your building contract. Here’s what’s included and your rights under SA law."
+>
+  <PageHero
+    title="Step 5: Your building contract"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Agreement"
+    tabs="process"
+  >
+    <p class="lead">Once you’ve accepted your final quote, we prepare your building contract. This is the agreement that covers the construction of your home.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What your contract includes">
+    <p><Placeholder>[CLIENT TO CONFIRM: contract type used, e.g. HIA or MBA standard contract.]</Placeholder></p>
+    <ul class="dlist">
+      <li>The contract price and payment stages</li>
+      <li>The plans and specifications your home will be built to</li>
+      <li>Estimated start and completion timeframes</li>
+      <li>How variations are handled</li>
+      <li>Warranties and responsibilities</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Your rights under SA law" alt>
+    <p>South Australia has clear rules to protect people building homes. According to the Legal Services Commission of SA:</p>
+    <ul class="dlist">
+      <li>Domestic building work contracts over $20,000 must be in writing and set out all the terms.</li>
+      <li>You have a cooling-off period of five clear business days after signing.</li>
+      <li>Your builder must give you a prescribed notice called "Form 1: Your building contract: your rights and obligations".</li>
+      <li>Statutory warranties apply, including that the work is done in a proper manner, with good quality materials and in line with the law.</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Building indemnity insurance">
+    <p>Before work starts, we arrange building indemnity insurance for eligible work. In SA, it’s required for building work of $20,000 or more that needs council approval. You’ll receive a copy of the certificate.</p>
+  </Section>
+
+  <Section num="04" title="What happens next" alt>
+    <p>With your contract signed and approvals in place, we’re ready to build.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/processing/">Next step: Processing</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Let’s make it official">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

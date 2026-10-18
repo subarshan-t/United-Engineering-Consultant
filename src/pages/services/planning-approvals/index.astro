@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+---
+<BaseLayout
+  title="Planning & Building Approvals Adelaide | UEC"
+  description="Planning Consent, Building Consent and Development Approval in South Australia, managed for you. UEC handles your application through PlanSA."
+>
+  <PageHero
+    title="Council approvals, handled for you"
+    image="/images/s4.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Planning and Approvals"
+    tabs="planningApprovals"
+  >
+    <p class="lead">Getting approval to build in South Australia can feel like learning a new language. Planning Consent, Building Consent, Development Approval, the Planning and Design Code, PlanSA. It’s a lot to take in when all you want to do is build your home.</p>
+    <p class="lead">We know the system, and we manage it for you.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about approvals</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="How approvals work in South Australia">
+    <p>Under South Australia’s planning system, the approval you need before building is called Development Approval. To get it, your project may need one or more consents, depending on what you’re doing:</p>
+    <p>Once all the consents your project needs are granted, Development Approval is issued and work can start.</p>
+    <ul class="dlist">
+      <li>Planning Consent: checks whether your project fits the planning rules for your area</li>
+      <li>Building Consent: checks that your building work meets the Building Rules and is safe</li>
+      <li>Land Division Consent: needed when you’re creating, moving or removing property boundaries</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Our approvals services" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Planning Consent</h3>
+        <p>We prepare and lodge your planning application and manage any questions from the assessing authority.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/planning-approvals/planning-consent/">Planning Consent</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Building Consent</h3>
+        <p>We prepare the technical documentation needed to show your home meets the Building Rules.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/planning-approvals/building-consent/">Building Consent</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Development Approval</h3>
+        <p>We bring your consents together to get your project to final approval.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/planning-approvals/development-approval/">Development Approval</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Council and authority coordination</h3>
+        <p>We deal with councils, SA Water, SA Power Networks and other authorities on your behalf.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/planning-approvals/council-authority-coordination/">Council and authority coordination</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Why let us manage your approvals">
+    <ul class="dlist">
+      <li>We design with the planning rules in mind, so your application starts in a strong position</li>
+      <li>Our drawings and engineering are prepared together, so they match</li>
+      <li>We answer assessors’ questions quickly, because we drew the plans</li>
+      <li>You don’t have to spend hours working out the PlanSA portal</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Who grants approvals in SA?">
+        <p>Depending on the project, consents can be granted by your local council, an accredited professional or, in some cases, a state body such as the State Planning Commission.</p>
+      </FaqItem>
+      <FaqItem question="How long do approvals take?">
+        <p>It depends on the type of assessment and whether more information is requested. We’ll give you a realistic estimate for your project.</p>
+      </FaqItem>
+      <FaqItem question="Can I start building once I have Planning Consent?">
+        <p>No. You need Development Approval before work starts, which means all required consents must be granted first.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Let us take care of the paperwork">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about approvals</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

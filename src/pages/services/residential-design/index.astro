@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Residential Home Design Adelaide | Plans to Build"
+  description="Custom home design in Adelaide, from concept sketches and planning drawings to construction drawings and 3D visuals. Designed to be built by UEC."
+>
+  <PageHero
+    title="Home design that’s ready to build"
+    image="/images/s1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Residential Designs"
+    tabs="residentialDesign"
+  >
+    <p class="lead">A beautiful design isn’t much use if it can’t be approved, engineered or built on budget. At United Engineering Consultants, we design homes with the whole journey in mind, because we’re the team that engineers and builds them too.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Designed around your life and your land">
+    <p>Every good home starts with two things: how you want to live, and what your block will let you do. We look at your site’s orientation, slope, soil, setbacks and the Planning and Design Code rules that apply, then design a home that makes the most of it.</p>
+    <p>Whether it’s a new family home, a knockdown rebuild, an extension or a granny flat, you’ll get a design that feels like yours and works in the real world.</p>
+  </Section>
+
+  <Section num="02" title="Our residential design services" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Concept design</h3>
+        <p>The first sketches of your home. We explore layouts, room sizes and the overall look and feel until the plan feels right.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/residential-design/concept-design/">Concept design</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Planning drawings</h3>
+        <p>The drawings council needs to assess your project for Planning Consent, showing your home’s layout, height, setbacks and how it sits on the site.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/residential-design/planning-drawings/">Planning drawings</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Working and construction drawings</h3>
+        <p>The detailed drawings your home is built from, including dimensions, materials and details for Building Consent and construction.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/residential-design/construction-drawings/">Working and construction drawings</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>3D design and visualisation</h3>
+        <p>See your home in 3D before a single brick is laid, so you can make decisions with confidence.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/residential-design/3d-design-visualisation/">3D design and visualisation</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Why design with a team that builds">
+    <p>When the people designing your home also build it, you get a design that’s realistic from day one.</p>
+    <ul class="dlist">
+      <li>Costs are considered as the design develops, so there are fewer shocks at quote time</li>
+      <li>Structural engineering is built into the design early</li>
+      <li>Construction details are drawn by people who know how they’ll be built on site</li>
+      <li>There’s no hand-over gap between your designer and your builder</li>
+    </ul>
+  </Section>
+
+  <Section num="04" title="Who we design for" alt>
+    <ul class="dlist">
+      <li>Families building a new home or knocking down and rebuilding</li>
+      <li>Homeowners renovating or extending</li>
+      <li>Investors adding a granny flat or developing a block</li>
+      <li>Builders and owner-builders who need design and drafting only</li>
+    </ul>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="How long does the design process take?">
+        <p>It depends on the size of your project and how many changes you make along the way. We’ll give you an estimated timeframe in your fee proposal. <Placeholder>[CLIENT TO CONFIRM: typical design timeframes, if they’d like to publish them.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Can I bring my own ideas or sketches?">
+        <p>Please do. Photos, sketches, Pinterest boards and floor plans you like are a great starting point for your concept design.</p>
+      </FaqItem>
+      <FaqItem question="Do I have to build with you if you design my home?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether design-only clients can take their plans to another builder, and on what terms.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Are you architects?">
+        <p><Placeholder>[CLIENT TO CONFIRM: if the team includes a registered architect, say so here. If not, use: "We’re building designers and engineers. In South Australia, only people registered with the Architectural Practice Board can call themselves architects."]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Let’s design your dream home">
+    <p slot="text">Tell us what you’re imagining. We’ll help you shape it into a home you can build.</p>
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

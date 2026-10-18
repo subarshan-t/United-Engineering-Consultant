@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Air Conditioning Layout & Ducted Air Design for Homes Adelaide"
+  description="Air Conditioning Layouts for Adelaide homes: ducted, split system and zoning designed for comfort and efficiency, planned with your build."
+>
+  <PageHero
+    title="Air Conditioning Layouts designed for Adelaide summers"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Plans', href: '/services/plans/' }]}
+    crumb="Air Conditioning Layout"
+    tabs="plans"
+  >
+    <p class="lead">Adelaide summers are hot, and winters can be cold. The right heating and cooling layout keeps every room comfortable without blowing your power bill. Planning it with your home design means your system is sized, placed and zoned properly from the start.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s in an air conditioning layout">
+    <p><Placeholder>[CLIENT TO CONFIRM: standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>System type, such as ducted, split system or a mix</li>
+      <li>Indoor and outdoor unit locations</li>
+      <li>Duct routes and vent positions for ducted systems</li>
+      <li>Zoning, so you only heat or cool the rooms you’re using</li>
+      <li>Return air grille positions</li>
+      <li>Controller locations</li>
+      <li>Space in the roof or ceiling for ductwork</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why plan your air conditioning early" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Better comfort</h3>
+        <p>Vents in the right spots mean even temperatures and no hot or cold patches.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Lower running costs</h3>
+        <p>A correctly sized and zoned system uses less energy.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>A cleaner look</h3>
+        <p>Planned early, units, ducts and vents can be placed so they don’t clash with lights, beams or joinery.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Structural coordination</h3>
+        <p>Ducted systems need space in the roof. We make sure your structure allows for it.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Works with your design">
+    <p>Your air conditioning layout is coordinated with your floor plans, ceiling heights, lighting and structural design, so everything fits.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/structural-design/">Structural design</ArrowLink>
+      <ArrowLink class="tlink" href="/services/plans/electrical-plans/">Electrical plans</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Ducted or split system?">
+        <p>It depends on your home’s size, layout, budget and how you use each space. We’ll talk you through the options.</p>
+      </FaqItem>
+      <FaqItem question="Do you install air conditioning?">
+        <p><Placeholder>[CLIENT TO CONFIRM: whether installation is included in builds or subcontracted.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Stay comfortable all year round">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

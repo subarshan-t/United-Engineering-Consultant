@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+---
+<BaseLayout
+  title="Building Consent SA | Building Rules Assessment | UEC"
+  description="Building Consent in South Australia, prepared and managed by UEC. Construction drawings and engineering checked against the Building Rules."
+>
+  <PageHero
+    title="Building Consent: proving your home is built to be safe"
+    image="/images/s4.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Planning and Approvals', href: '/services/planning-approvals/' }]}
+    crumb="Building Consent"
+    tabs="planningApprovals"
+  >
+    <p class="lead">Once your project has Planning Consent, it needs to show that it can be built safely and to the right standards. That’s what Building Consent is for.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about Building Consent</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What is Building Consent?">
+    <p>According to PlanSA, Building Consent is required for development that involves building work, such as new homes, extensions, carports, swimming pools and demolition. It checks that the work meets safety and compliance standards. It’s usually granted by a council building officer or an accredited professional.</p>
+  </Section>
+
+  <Section num="02" title="What gets assessed" alt>
+    <p>Building Consent checks your plans against the Building Rules, which include the National Construction Code. Assessors look at things like:</p>
+    <ul class="dlist">
+      <li>Structural adequacy, including footings and framing</li>
+      <li>Fire safety</li>
+      <li>Health and amenity, such as wet areas, ventilation and light</li>
+      <li>Energy efficiency</li>
+      <li>Access and safety features</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="What’s needed for your application">
+    <p>Because we prepare the drawings and engineering together, your Building Consent application is coordinated and consistent.</p>
+    <ul class="dlist">
+      <li>Detailed construction drawings</li>
+      <li>Structural engineering drawings and calculations</li>
+      <li>Soil report and footing design</li>
+      <li>Site and drainage plans</li>
+      <li>Energy efficiency documentation</li>
+      <li>Other reports your project needs</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/residential-design/construction-drawings/">Working and construction drawings</ArrowLink>
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Structural engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Can I get Building Consent before Planning Consent?">
+        <p>In SA, consents can sometimes be staged. Usually Planning Consent comes first, as changes at planning stage can affect your construction documentation. We’ll advise the best approach for your project.</p>
+      </FaqItem>
+      <FaqItem question="Who can grant Building Consent?">
+        <p>Council building officers or accredited professionals. We’ll coordinate this for you.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Move your project closer to construction">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about Building Consent</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

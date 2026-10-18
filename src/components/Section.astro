@@ -1,0 +1,22 @@
+---
+// Numbered two-column content section used on inner pages.
+interface Props {
+  num: string;
+  title: string;
+  alt?: boolean;
+}
+
+const { num, title, alt = false } = Astro.props;
+---
+<section class:list={['sec', { alt }]}>
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="sec-head">
+        <div class="eyebrow">{num}</div>
+        <h2 class="serif">{title}</h2>
+      </div>
+      <div class="sec-body"><slot /></div>
+    </div>
+    <slot name="after" />
+  </div>
+</section>

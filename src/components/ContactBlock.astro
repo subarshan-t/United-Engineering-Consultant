@@ -1,0 +1,29 @@
+---
+import Icon from './Icon.astro';
+import Placeholder from './Placeholder.astro';
+import EnquiryForm from './EnquiryForm.astro';
+import { site, placeholders } from '../data/site';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<div class="contact-block">
+  <div class="cb-info">
+    <div class="eyebrow">GET IN TOUCH</div>
+    <h2 class="serif h2-lg">{title}</h2>
+    <p class="sub">Tell us what you’re planning and we’ll help you understand the next step.</p>
+    <ul class="cb-list">
+      <li>
+        <Icon name="phone" />
+        {site.phone ? <a href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a> : <span><Placeholder>{placeholders.phone}</Placeholder></span>}
+      </li>
+      <li><Icon name="mail" /><a href={`mailto:${site.email}`}>{site.email}</a></li>
+      <li><Icon name="pin" /><span>{site.location}</span></li>
+      <li><Icon name="clock" /><span>{site.hours}</span></li>
+    </ul>
+  </div>
+  <EnquiryForm />
+</div>

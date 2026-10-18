@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Working & Construction Drawings Adelaide | UEC"
+  description="Detailed working and construction drawings for Building Consent and construction in Adelaide. Coordinated with engineering by the team that builds."
+>
+  <PageHero
+    title="Working and construction drawings, drawn by people who build"
+    image="/images/s1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Residential Designs', href: '/services/residential-design/' }]}
+    crumb="Working & Construction Drawings"
+    tabs="residentialDesign"
+  >
+    <p class="lead">Once your design is approved at planning stage, it needs a lot more detail before it can be built. Working and construction drawings are the instruction manual for your home. They tell everyone on site exactly what goes where, and they’re needed for Building Consent.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your drawings</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What’s included in construction drawings">
+    <p><Placeholder>[CLIENT TO CONFIRM: final list of standard inclusions.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Detailed floor plans with full dimensions</li>
+      <li>Elevations and sections showing heights, levels and construction details</li>
+      <li>Roof plans, including roof pitch and drainage</li>
+      <li>Window and door schedules</li>
+      <li>Wall, floor and roof construction details</li>
+      <li>Wet area details for bathrooms, ensuites and laundries</li>
+      <li>Energy efficiency information required under the National Construction Code</li>
+      <li>Coordination with structural engineering, site and drainage plans</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Why detail matters" alt>
+    <p>Every gap in a set of drawings becomes a question on site. Questions lead to delays, guesswork and variations, which are extra costs added during the build. Detailed drawings reduce those risks.</p>
+    <p>Because our drafting, engineering and construction teams work together, your drawings are checked by people who’ll use them. That means the details on paper match the way your home is actually built.</p>
+  </Section>
+
+  <Section num="03" title="Coordinated with your engineering">
+    <p>Your construction drawings and structural engineering need to match perfectly. When they’re prepared by different businesses, small differences can cause big problems. We prepare them together, so the architectural and structural details line up.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Structural engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="04" title="Building Consent" alt>
+    <p>Construction drawings form a key part of your Building Consent application, where your plans are checked against the Building Rules, including the National Construction Code. We prepare and lodge the documentation for you.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/planning-approvals/building-consent/">Building Consent</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="What’s the difference between planning drawings and construction drawings?">
+        <p>Planning drawings show what you want to build so it can be assessed against planning rules. Construction drawings add the technical detail needed to meet building rules and to actually build it.</p>
+      </FaqItem>
+      <FaqItem question="Can builders order construction drawings from you?">
+        <p>Yes. Builders and owner-builders can engage us for drafting and engineering only.</p>
+      </FaqItem>
+      <FaqItem question="Will my final quote be based on these drawings?">
+        <p>Yes. Our final quote is prepared from detailed drawings, which gives you a more accurate price than a quote based on a concept plan.</p>
+      </FaqItem>
+    </div>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/services/plans/">Plans</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get your drawings ready to build">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your drawings</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

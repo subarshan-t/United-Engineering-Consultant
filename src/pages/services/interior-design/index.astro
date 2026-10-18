@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Interior Design for New Homes & Renovations Adelaide"
+  description="Interior design for Adelaide homes: kitchens, bathrooms, joinery, materials and finishes, designed alongside your build by UEC."
+>
+  <PageHero
+    title="Interiors that feel like home from day one"
+    image="/images/s2.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Interior Design"
+    tabs="interiorDesign"
+  >
+    <p class="lead">The structure makes your home stand up. The interiors make it feel like yours. Our interior design team helps you create spaces that look beautiful, work hard and suit the way you live, all designed alongside your build so everything fits.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book a design consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Why design interiors with your build">
+    <p>When interiors are an afterthought, things clash. The power point’s in the wrong spot, the fridge space is too small or the lighting doesn’t suit the room. Designing your interiors alongside your plans means every detail is planned before construction starts.</p>
+  </Section>
+
+  <Section num="02" title="Our interior design services" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>Interior design</h3>
+        <p>Space planning, lighting, colour schemes and the overall look and feel of your home.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/interior-design/">Interior design</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Kitchen and bathroom design</h3>
+        <p>The hardest-working rooms in your home, designed for function and style.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/interior-design/kitchen-bathroom-design/">Kitchen and bathroom design</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Furniture and joinery</h3>
+        <p>Custom cabinetry, storage and built-ins designed to fit perfectly.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/interior-design/furniture-joinery/">Furniture and joinery</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Materials and finishes</h3>
+        <p>Help choosing flooring, tiles, benchtops, cladding, colours and fixtures.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/interior-design/materials-finishes/">Materials and finishes</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Know the cost as you choose">
+    <p>Selections are one of the biggest sources of budget blowouts in any build. Upgrades add up fast. We help you understand the cost of your choices as you make them, so your final quote reflects what you actually want.</p>
+  </Section>
+
+  <Section num="04" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Is interior design only for new homes?">
+        <p>No. We also work on renovations, extensions and individual rooms like kitchens and bathrooms.</p>
+      </FaqItem>
+      <FaqItem question="Can I bring my own ideas?">
+        <p>Yes, please do. Bring your mood boards, photos and inspiration. We’ll help you turn them into a plan that works.</p>
+        <p><Placeholder>[CLIENT TO CONFIRM: whether interior design is offered as a standalone service, or only as part of a build.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Create a home you’ll love living in">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book a design consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Pre-Handover Inspection | New Home Adelaide | UEC"
+  description="Before you get the keys, walk through your new home with UEC. We note anything that needs attention and fix it before handover."
+>
+  <PageHero
+    title="Step 7: Pre-handover inspection"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Pre handover"
+    tabs="process"
+  >
+    <p class="lead">Before we hand over the keys, we walk through your new home with you. It’s your chance to check every room, ask questions and point out anything that needs attention.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What happens at pre-handover">
+    <ul class="dlist">
+      <li>We walk through the home together, room by room</li>
+      <li>We check finishes, fixtures, fittings and appliances</li>
+      <li>We note anything that needs fixing or finishing</li>
+      <li>We agree on a plan and timeframe to complete those items</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Tips for your inspection" alt>
+    <p>You’re also welcome to bring an independent building inspector. <Placeholder>[CLIENT TO CONFIRM: that this is welcome.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Take your time and don’t feel rushed</li>
+      <li>Bring a copy of your plans and selections</li>
+      <li>Check doors, windows, taps and power points</li>
+      <li>Look at walls, ceilings and floors in good light</li>
+      <li>Write everything down, or take photos</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Fixing items before handover">
+    <p>We work through the agreed list and let you know when everything’s done, so your home is ready when you move in.</p>
+  </Section>
+
+  <Section num="04" title="What happens next" alt>
+    <p>Once everything’s complete, it’s time for handover.</p>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/handover/">Next step: Handover</ArrowLink>
+    </div>
+  </Section>
+
+  <CtaBanner title="Start your journey to the keys">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

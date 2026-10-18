@@ -1,0 +1,51 @@
+---
+import { tabs as tabGroups, type TabGroup, type Link } from '../data/navigation';
+import { isCurrent } from '../lib/paths';
+
+interface Props {
+  title: string;
+  image: string;
+  imageAlt?: string;
+  /** Breadcrumb trail between Home and the current page. */
+  crumbs?: Link[];
+  /** Label for the current page in the breadcrumb trail. */
+  crumb: string;
+  tabs?: TabGroup;
+}
+
+const { title, image, imageAlt = '', crumbs = [], crumb, tabs } = Astro.props;
+const path = Astro.url.pathname;
+const tabLinks = tabs ? tabGroups[tabs] : [];
+---
+<section class="page-hero">
+  <div class="hero-img"><img src={image} alt={imageAlt} /></div>
+  <div class="hero-shade"></div>
+  <div class="hero-mob"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span>
+        {crumbs.map((c) => (
+          <Fragment><a href={c.href}>{c.label}</a><span class="sep">/</span></Fragment>
+        ))}
+        <span aria-current="page">{crumb}</span>
+      </nav>
+      <h1 class="serif">{title}</h1>
+      <slot />
+      {Astro.slots.has('actions') && <div class="btn-row"><slot name="actions" /></div>}
+    </div>
+  </div>
+  {tabLinks.length > 0 && (
+    <div class="tabs">
+      <div class="wrap tabs-row">
+        {tabLinks.map((t) =>
+          isCurrent(t.href, path) ? (
+            <a href={t.href} class="is-active" aria-current="page">{t.label}</a>
+          ) : (
+            <a href={t.href}>{t.label}</a>
+          ),
+        )}
+      </div>
+    </div>
+  )}
+</section>

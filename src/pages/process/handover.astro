@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Placeholder from '../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Handover Day | Get the Keys to Your New Home | UEC"
+  description="Handover is the day you get the keys to your new home. Here’s what UEC gives you on the day and how we support you afterwards."
+>
+  <PageHero
+    title="Step 8: Handover, the day your dream becomes home"
+    image="/images/s5.jpg"
+    crumbs={[{ label: 'Process', href: '/process/' }]}
+    crumb="Handover"
+    tabs="process"
+  >
+    <p class="lead">This is the day we’ve all been working towards. We hand over the keys to your new home, along with everything you need to look after it.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Book an initial consultation</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What you’ll receive">
+    <p><Placeholder>[CLIENT TO CONFIRM: handover pack contents.]</Placeholder></p>
+    <ul class="dlist">
+      <li>Keys and access remotes</li>
+      <li>Warranty information for your home and appliances</li>
+      <li>Manuals and care instructions</li>
+      <li>Certificates and compliance documents</li>
+      <li>Contact details for after-handover support</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Looking after you after handover" alt>
+    <p>Our job doesn’t end when you move in. <Placeholder>[CLIENT TO CONFIRM: maintenance period, e.g. how long after handover they return to fix minor items, and how clients report issues.]</Placeholder></p>
+    <p>Under SA law, statutory warranties apply to domestic building work, and claims can be made up to five years from completion, according to the Legal Services Commission of SA.</p>
+  </Section>
+
+  <Section num="03" title="Share your story">
+    <p>We’d love to hear about your experience. <Placeholder>[CLIENT TO CONFIRM: link to Google reviews.]</Placeholder></p>
+  </Section>
+
+  <CtaBanner title="Ready to start your own journey?">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Book an initial consultation</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="House, Engineering & Services Plans Adelaide | UEC"
+  description="House plans, engineering plans, electrical, plumbing, air conditioning and structural plans for Adelaide homeowners, builders and developers."
+>
+  <PageHero
+    title="The plans you need, prepared by one coordinated team"
+    image="/images/p1.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Plans"
+    tabs="plans"
+  >
+    <p class="lead">Every building project runs on plans. Plans for council, plans for the builder, plans for the electrician, plumber and air conditioning installer. When they’re all prepared by different people, they don’t always match. Ours are prepared together, so they do.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Request a quote for plans</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Who we prepare plans for">
+    <ul class="dlist">
+      <li>Homeowners building with us</li>
+      <li>Builders who need drafting and engineering</li>
+      <li>Owner-builders managing their own projects</li>
+      <li>Developers and investors planning new dwellings</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Our plans" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>House plans</h3>
+        <p>Floor plans, elevations and site plans for new homes, extensions and granny flats.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/house-plans/">House plans</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Engineering plans</h3>
+        <p>Engineering drawings that show how your home is supported and drained.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/engineering-plans/">Engineering plans</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Electrical plans</h3>
+        <p>Power, lighting, switches and data, planned room by room.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/electrical-plans/">Electrical plans</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Plumbing plans</h3>
+        <p>Water, waste and drainage layouts for kitchens, bathrooms and laundries.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/plumbing-plans/">Plumbing plans</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>Air Conditioning Layout</h3>
+        <p>Heating and cooling layouts for comfort and efficiency.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/air-conditioning-layout/">Air Conditioning Layout</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">06</span>
+        <h3>Structural plan</h3>
+        <p>Detailed structural drawings for footings, frames and beams.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/plans/structural-plan/">Structural plan</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Why coordinated plans matter">
+    <p>If your electrical plan puts a power point where your joinery goes, or your plumbing plan doesn’t match your bathroom design, someone has to fix it on site. That costs time and money. Our plans are prepared by one team, checked against each other and designed to work together.</p>
+  </Section>
+
+  <Section num="04" title="For builders and developers" alt>
+    <p>Need reliable plans without the back and forth? Tell us what you need and your timeframe, and we’ll give you a clear quote. <Placeholder>[CLIENT TO CONFIRM: typical turnaround times for builders.]</Placeholder></p>
+  </Section>
+
+  <Section num="05" title="Frequently asked questions">
+    <div class="faq">
+      <FaqItem question="Can I order just one type of plan?">
+        <p>Yes. You can order individual plans or a complete package.</p>
+      </FaqItem>
+      <FaqItem question="Do your plans meet council requirements?">
+        <p>Our plans are prepared to support your Planning Consent and Building Consent applications.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get the plans your project needs">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Request a quote for plans</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

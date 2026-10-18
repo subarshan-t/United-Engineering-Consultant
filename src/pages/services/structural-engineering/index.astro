@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Section from '../../../components/Section.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import FaqItem from '../../../components/FaqItem.astro';
+import ArrowLink from '../../../components/ArrowLink.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+---
+<BaseLayout
+  title="Residential Structural Engineer Adelaide | UEC"
+  description="Residential structural engineering in Adelaide: new home engineering, footings, structural design, site and drainage plans and retaining walls."
+>
+  <PageHero
+    title="Structural engineering for homes that stand the test of time"
+    image="/images/s3.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Structural Engineering"
+    tabs="structuralEngineering"
+  >
+    <p class="lead">You’ll never see most of the engineering in your home. It’s in the footings under the slab, the beams above the ceiling and the drainage around the site. But it’s what keeps your home solid, safe and free from cracks for decades.</p>
+    <p class="lead">At United Engineering Consultants, engineering isn’t an add-on. It’s in our name and at the heart of everything we design and build.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to an engineer</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="Why engineering matters in Adelaide">
+    <p>Many parts of Adelaide sit on reactive clay soils. These soils swell when they get wet and shrink as they dry out, which can move footings and cause cracking if a home isn’t designed for it. Every site is different, so every home needs engineering that’s designed for the ground it sits on.</p>
+    <p>Under the Australian Standard for residential slabs and footings (AS 2870), sites are classified by how much the soil is expected to move, from Class A (little or no movement) to Class E (extreme movement), with Class P for problem sites. Your site class shapes your footing design.</p>
+  </Section>
+
+  <Section num="02" title="Our structural engineering services" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>New home engineering</h3>
+        <p>Complete structural engineering for new homes and knockdown rebuilds.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/structural-engineering/new-home-engineering/">New home engineering</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>Footings and foundations</h3>
+        <p>Slab and footing design to suit your soil report and site classification.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/structural-engineering/footings-foundations/">Footings and foundations</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>Site and drainage plans</h3>
+        <p>Stormwater, levels and drainage designed to protect your home and meet council requirements.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/structural-engineering/site-drainage-plans/">Site and drainage plans</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>Structural design</h3>
+        <p>Beams, bracing, frames and wall removals for new homes, renovations and extensions.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/structural-engineering/structural-design/">Structural design</ArrowLink>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>Retaining walls</h3>
+        <p>Engineered retaining walls for sloping sites, cut and fill, and boundaries.</p>
+        <div class="card-links">
+          <ArrowLink href="/services/structural-engineering/retaining-walls/">Retaining walls</ArrowLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="03" title="Engineering and design, working together">
+    <p>When engineering is done by a separate firm at the end of the design process, problems often turn up late. A beam that won’t fit, a slab that’s more expensive than expected or a design that needs to change.</p>
+    <p>We bring engineering into your design from the start. Our engineers and designers work side by side, so your plans are structurally sound and cost-effective before they go to council.</p>
+  </Section>
+
+  <Section num="04" title="For builders and owner-builders" alt>
+    <p>Already have a builder or managing your own build? You can engage us for structural engineering only.</p>
+  </Section>
+
+  <Section num="05" title="Our engineering credentials">
+    <p><Placeholder>[TEAM QUALIFICATIONS: name of the engineer responsible, qualifications, e.g. CPEng, NER, Engineers Australia membership, and professional indemnity insurance.]</Placeholder></p>
+  </Section>
+
+  <Section num="06" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Do I need a structural engineer for my home?">
+        <p>Almost every new home, and many renovations and extensions, need structural engineering as part of Building Consent. We’ll tell you what your project needs.</p>
+      </FaqItem>
+      <FaqItem question="Do I need a soil test?">
+        <p>For new homes and most extensions, yes. Your footing design is based on a soil report, which gives your site its classification. <Placeholder>[CLIENT TO CONFIRM: whether UEC arranges the soil test or the client does.]</Placeholder></p>
+      </FaqItem>
+      <FaqItem question="Can you engineer plans drawn by someone else?">
+        <p><Placeholder>[CLIENT TO CONFIRM.]</Placeholder></p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Build on solid ground">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to an engineer</ArrowLink>
+  </CtaBanner>
+</BaseLayout>
