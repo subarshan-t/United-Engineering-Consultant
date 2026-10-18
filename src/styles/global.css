@@ -60,15 +60,16 @@ a:hover .arr{transform:translateX(3px)}
 .mega-col a{font-size:13.5px;font-weight:300;color:#C9CFD8}
 .mega-col a:hover{color:#fff}
 .mega-col a.mega-hub{font-family:var(--display);font-size:18px;font-weight:400;color:#fff;padding-bottom:12px;border-bottom:1px solid rgba(241,232,218,.3)}
-.mobile-menu{position:fixed;inset:0;z-index:100;background:var(--navy);color:#fff;display:none;flex-direction:column;padding:24px var(--gutter) 32px;overflow-y:auto}
+.mobile-menu{position:fixed;inset:0;z-index:100;background:var(--navy);color:#fff;display:none;flex-direction:column;padding:max(20px,env(safe-area-inset-top)) var(--gutter) max(28px,env(safe-area-inset-bottom));overflow-y:auto}
 .mobile-menu.is-open{display:flex}
 .mm-top{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.mm-close{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;font-size:22px;cursor:pointer;flex:none}
-.mm-nav{margin-top:36px;display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.14)}
-.mm-nav a{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);font-family:var(--display);font-size:26px;color:#fff}
+.mm-close{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;font-size:22px;cursor:pointer;flex:none}
+.mm-nav{margin-top:24px;display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.14)}
+.mm-nav a{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14);font-family:var(--display);font-size:19px;color:#fff}
 .mm-nav a.is-active{color:var(--sand)}
-.mm-nav .arr{font-family:var(--sans);font-size:18px}
-.mm-cta{margin-top:28px;justify-content:center}
+.mm-nav .arr{font-family:var(--sans);font-size:15px;opacity:.7}
+.mm-cta{margin-top:24px;justify-content:center}
+@media (max-height:700px){.mm-nav{margin-top:16px}.mm-nav a{padding:11px 0}.mm-cta{margin-top:18px}}
 
 /* Heroes */
 .hero,.page-hero{position:relative;background:var(--navy-hero);color:#fff;overflow:hidden}
