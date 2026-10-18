@@ -1,10 +1,11 @@
 /* United Engineering Consultants — site styles */
+@font-face{font-family:'Varela Round';src:url('/fonts/VarelaRound-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 :root{
   --navy:#0B2232;--navy-2:#0C2337;--navy-3:#091A2B;--navy-hero:#0E1A2A;
   --sand:#F1E8DA;--sand-2:#F0E9DB;--bronze:#9C7A4E;--bronze-line:#D5C9B9;
   --ivory:#FAF8F6;--stone:#F4F2EE;--stone-2:#F2F0EC;--linen:#F2EEEB;
   --ink:#0B2232;--body:#3E4957;--muted:#5B6572;--muted-2:#6B7480;--rule:#DDD8CD;--rule-2:#E4E0D9;
-  --serif:'Libre Caslon Text',Georgia,serif;--sans:'Jost',system-ui,sans-serif;
+  --serif:'Libre Caslon Text',Georgia,serif;--sans:'Varela Round',system-ui,sans-serif;
   --gutter:clamp(20px,5vw,86px);
   --radius:16px;--radius-sm:10px;
 }
