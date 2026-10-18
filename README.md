@@ -25,12 +25,17 @@ Requires Node.js 22 or newer.
 | Styles and design tokens | `src/styles/global.css` |
 | Menu and form behaviour | `src/scripts/main.js` |
 | Images and logos | `public/images/` |
+| Home hero video | `public/videos/` |
 
 The file path in `src/pages/` is the URL: for example `src/pages/services/plans/house-plans.astro` is `/services/plans/house-plans/`.
 
 ## Replacing images
 
 The images in `public/images/` are placeholders cropped from the mockup. Replace a file with one of the same name to swap it across the site, or add new files and update the `image="/images/..."` props on the pages.
+
+## Home hero video
+
+The home page hero plays `public/videos/hero.mp4` (muted, looping) behind the navy gradient, with `public/images/hero-poster.jpg` shown while it loads and for visitors who have reduced motion turned on. To swap it, replace both files. Keep the video short, silent and compressed (H.264 MP4, a few MB) so the page stays fast.
 
 ## Placeholders
 

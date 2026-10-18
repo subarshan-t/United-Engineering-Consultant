@@ -24,6 +24,13 @@
   });
   if (header) header.addEventListener('mouseleave', function () { setMega(false); });
 
+  // Hero video: hold on the poster frame for visitors who prefer reduced motion
+  var heroVideo = document.querySelector('[data-hero-video]');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  }
+
   // File upload label
   document.querySelectorAll('.upload input[type=file]').forEach(function (inp) {
     inp.addEventListener('change', function () {
