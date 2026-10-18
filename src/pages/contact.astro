@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import ContactBlock from '../components/ContactBlock.astro';
 import Licence from '../components/Licence.astro';
-import Placeholder from '../components/Placeholder.astro';
+import { site } from '../data/site';
 ---
 <BaseLayout
   title="Contact United Engineering Consultants | Adelaide Builders"
@@ -14,7 +14,7 @@ import Placeholder from '../components/Placeholder.astro';
     image="/images/home-two-storey-timber.jpg"
     crumb="Contacts"
   >
-    <p class="lead">Whether you’re just starting to think about building or you’re ready to go, we’d love to hear from you. Tell us a bit about your project and we’ll be in touch <Placeholder>[CLIENT TO CONFIRM: response time, e.g. within one business day]</Placeholder>.</p>
+    <p class="lead">Whether you’re just starting to think about building or you’re ready to go, we’d love to hear from you. Tell us a bit about your project and we’ll be in touch {site.responseTime}.</p>
   </PageHero>
 
   <section class="sec">

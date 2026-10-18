@@ -19,6 +19,7 @@ export const site = {
     'Adelaide engineering and design firm providing residential design, structural and civil engineering, building approvals and construction for homes across South Australia.',
   hours: 'Monday – Friday, 9:00am – 5:00pm',
   hoursShort: 'Mon – Fri, 9:00am – 5:00pm',
+  responseTime: 'within two business days', // how quickly enquiries are answered
   licence: 'BLD 350766' as string | null, // Building Work Contractor's Licence
   abn: '73 683 735 328' as string | null,
   engineerCredential: 'MIEAust' as string | null,
