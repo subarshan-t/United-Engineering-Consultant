@@ -24,6 +24,7 @@ Requires Node.js 22 or newer.
 | Reusable sections (hero, numbered section, CTA banner, FAQ, contact form) | `src/components/` |
 | Styles and design tokens | `src/styles/global.css` |
 | Menu and form behaviour | `src/scripts/main.js` |
+| Scroll and load animations | `src/styles/motion.css`, `src/scripts/motion.js` |
 | Images and logos | `public/images/` |
 | Home hero video | `public/videos/` |
 
@@ -36,6 +37,17 @@ The images in `public/images/` are placeholders cropped from the mockup. Replace
 ## Home hero video
 
 The home page hero plays `public/videos/hero.mp4` (muted, looping) behind the navy gradient, with `public/images/hero-poster.jpg` shown while it loads and for visitors who have reduced motion turned on. To swap it, replace both files. Keep the video short, silent and compressed (H.264 MP4, a few MB) so the page stays fast.
+
+## Motion
+
+Scroll and load animations live in `src/styles/motion.css` and `src/scripts/motion.js` (no libraries):
+
+- Sections, headings and text fade up as they scroll into view, and card grids, lists and FAQs arrive one item at a time. The script picks these out automatically, so new pages built from the same components animate without extra work.
+- The hero copy builds in on load, and banner and feature images drift slowly as they scroll past (in browsers that support scroll-driven animations).
+- On the home page, the "How it works" steps light up in order along a drawn line.
+- The header becomes a solid navy bar once you scroll past the top.
+
+Visitors with "reduce motion" turned on get no animation, and if the script fails to start within 3 seconds all content shows as normal. To turn the animations off entirely, remove the `motion.css` import and the motion scripts from `src/layouts/BaseLayout.astro`.
 
 ## Placeholders
 

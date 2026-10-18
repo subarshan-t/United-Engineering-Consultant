@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/motion.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
@@ -49,6 +50,17 @@ const hasFaq = content.includes('itemprop="mainEntity"');
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    <script is:inline>
+      // Turn on motion unless the visitor prefers reduced motion. If the motion script hasn't
+      // started within 3 seconds, switch it off again so no content stays hidden.
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('motion');
+        setTimeout(function () {
+          var c = document.documentElement.classList;
+          if (!c.contains('motion-ready')) c.remove('motion');
+        }, 3000);
+      }
+    </script>
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body class={home ? 'is-home' : 'is-inner'}>
@@ -60,5 +72,6 @@ const hasFaq = content.includes('itemprop="mainEntity"');
     )}
     <Footer />
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/motion.js"></script>
   </body>
 </html>
