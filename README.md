@@ -32,7 +32,9 @@ The file path in `src/pages/` is the URL: for example `src/pages/services/plans/
 
 ## Replacing images
 
-The images in `public/images/` are placeholders cropped from the mockup. Replace a file with one of the same name to swap it across the site, or add new files and update the `image="/images/..."` props on the pages.
+Images in `public/images/` are named by what they show (`home-…`, `interior-…`, `construction-…`). Replace a file with one of the same name to swap it everywhere it's used, or add a new file and point a page's `image="/images/..."` prop at it. Keep photos around 1280–1600px wide and saved as JPG (quality ~80) so pages stay fast.
+
+The default image for the call-to-action banner at the bottom of pages is set in `src/components/CtaBanner.astro`.
 
 ## Home hero video
 
