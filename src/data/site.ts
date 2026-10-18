@@ -7,9 +7,9 @@ export const site = {
   location: 'Adelaide, South Australia',
   hours: 'Monday – Friday, 9:00am – 5:00pm',
   hoursShort: 'Mon – Fri, 9:00am – 5:00pm',
-  licence: null as string | null, // Building Work Contractor's Licence (BLD ...)
-  abn: null as string | null,
-  engineerCredential: null as string | null, // e.g. 'CPEng / NER'
+  licence: 'BLD 350766' as string | null, // Building Work Contractor's Licence
+  abn: '73 683 735 328' as string | null,
+  engineerCredential: 'MIEAust' as string | null,
 
   // Form service URL for the enquiry form, e.g. 'https://formspree.io/f/YOUR_FORM_ID'.
   // While empty, the form validates and shows the thank-you message but sends nothing.
