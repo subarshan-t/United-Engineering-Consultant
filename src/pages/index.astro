@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactBlock from '../components/ContactBlock.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import { reviews } from '../data/reviews';
+import { site } from '../data/site';
 import ArrowLink from '../components/ArrowLink.astro';
 import Icon from '../components/Icon.astro';
 import Licence from '../components/Licence.astro';
@@ -30,6 +31,7 @@ import Placeholder from '../components/Placeholder.astro';
           <ArrowLink class="btn btn-white btn-lg" href="/contact/">Request a Quote</ArrowLink>
           <a class="btn btn-outline-light btn-lg" href="/projects/">View Our Projects</a>
         </div>
+        <p class="hero-stat"><strong>{site.homesDelivered}</strong><span>homes delivered<br />across Adelaide</span></p>
       </div>
     </div>
   </section>
@@ -216,6 +218,13 @@ import Placeholder from '../components/Placeholder.astro';
             <p>You’ll have one main contact who keeps you informed at every stage. <Placeholder>[CLIENT TO CONFIRM: how often clients receive updates, e.g. weekly, so we can state it here.]</Placeholder></p>
           </div>
         </li>
+        <li>
+          <span class="why-n">06</span>
+          <div>
+            <h3>Support for new builders</h3>
+            <p>Building for the first time, or managing your own build? We guide you through every stage and help you find reliable, cost-efficient trades and materials. <a class="why-link" href="/services/project-management/">Project management</a></p>
+          </div>
+        </li>
       </ol>
     </div>
     <div class="why-img"><img src="/images/home-contemporary-pool.jpg" alt="" loading="lazy" /></div>
@@ -305,6 +314,7 @@ import Placeholder from '../components/Placeholder.astro';
         <p class="sub">Building a home is one of the biggest investments you’ll make, so you deserve to know who you’re dealing with.</p>
       </div>
       <ul class="dlist">
+        <li>{site.homesDelivered} homes delivered across Adelaide.</li>
         <li>We’re a licensed SA building work contractor: licence <Licence />.</li>
         <li>Building indemnity insurance is arranged for every home where it’s required. In SA, that’s building work of $20,000 or more that needs council approval.</li>
         <li>Your home is designed and engineered by qualified professionals, including a Member of Engineers Australia (MIEAust).</li>

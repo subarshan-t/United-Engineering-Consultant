@@ -14,9 +14,10 @@ export const site = {
     addressCountry: 'AU',
   },
   areaServed: ['Adelaide', 'South Australia'],
+  homesDelivered: '100+', // shown in the home hero and trust lists
   openingHours: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
   description:
-    'Adelaide engineering and design firm providing residential design, structural and civil engineering, building approvals and construction for homes across South Australia.',
+    'Adelaide engineering and design firm with 100+ homes delivered, providing residential design, structural and civil engineering, building approvals, project management and construction across South Australia.',
   hours: 'Monday – Friday, 9:00am – 5:00pm',
   hoursShort: 'Mon – Fri, 9:00am – 5:00pm',
   responseTime: 'within two business days', // how quickly enquiries are answered

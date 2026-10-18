@@ -61,6 +61,8 @@ export function organisationSchema(origin: URL) {
       'Subdivision and land division',
       'Interior design',
       'House plans',
+      'Construction project management',
+      'Guidance for first-home builders and owner-builders',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

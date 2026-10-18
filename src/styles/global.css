@@ -55,7 +55,7 @@ a:hover .arr{transform:translateX(3px)}
 .burger span:last-child{width:12px;margin-left:6px}
 .mega{display:none;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px rgba(8,14,26,.35)}
 .mega.is-open{display:block}
-.mega-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;padding-top:32px;padding-bottom:40px}
+.mega-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:24px;padding-top:32px;padding-bottom:40px}
 .mega-col{display:flex;flex-direction:column;gap:10px}
 .mega-col a{font-size:13.5px;font-weight:300;color:#C9CFD8}
 .mega-col a:hover{color:#fff}
@@ -315,6 +315,13 @@ a:hover .arr{transform:translateX(3px)}
 .mm-call .ico{width:18px;height:18px;stroke-width:1.5}
 .f-col a.f-tel{display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-decoration-color:var(--bronze-line);text-underline-offset:4px}
 .f-col a.f-tel .ico{width:16px;height:16px;stroke-width:1.5;color:var(--bronze)}
+
+/* Home hero track-record stat */
+.hero-stat{margin-top:34px;display:flex;align-items:center;gap:14px;color:#E6E9EE;font-size:14px;line-height:1.35;letter-spacing:.02em}
+.hero-stat strong{font-family:var(--display);font-weight:400;font-size:clamp(34px,3vw,44px);line-height:1;color:var(--sand)}
+.hero-stat span{padding-left:14px;border-left:1px solid rgba(241,232,218,.35)}
+.why-link{color:var(--sand);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.why-link:hover{color:#fff}
 
 /* Kicker separators */
 .kicker i{font-style:normal;opacity:.5;margin:0 .35em}

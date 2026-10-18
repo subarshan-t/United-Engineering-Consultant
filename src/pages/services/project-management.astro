@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import FaqItem from '../../components/FaqItem.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import Licence from '../../components/Licence.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="Project Management for Home Builds Adelaide | UEC"
+  description="Project management and guidance for new builders and owner-builders in Adelaide. We coordinate trades, source cost-efficient materials and keep you on track."
+>
+  <PageHero
+    title="Project management that keeps your build on track"
+    image="/images/construction-bushland-timber.jpg"
+    crumbs={[{ label: 'Services', href: '/services/' }]}
+    crumb="Project Management"
+    tabs="services"
+  >
+    <p class="lead">Building for the first time, or managing your own build? We guide you through every stage, line up reliable, cost-efficient trades and materials, and keep your project moving, so you’re never left working it out on your own.</p>
+    <ArrowLink class="btn btn-white btn-lg" href="/contact/" slot="actions">Talk to us about your build</ArrowLink>
+  </PageHero>
+
+  <Section num="01" title="What we manage">
+    <p>We take on as much or as little as you need, from a few key stages to running the whole build day to day.</p>
+    <ul class="dlist">
+      <li>Planning the build program, stages and budget</li>
+      <li>Finding and coordinating reliable trades</li>
+      <li>Sourcing materials and comparing quotes</li>
+      <li>Site meetings and regular progress updates</li>
+      <li>Quality checks at key stages of the build</li>
+      <li>Keeping costs visible and flagging changes early</li>
+      <li>Coordinating inspections and approval conditions</li>
+    </ul>
+  </Section>
+
+  <Section num="02" title="Guidance and support for new builders" alt>
+    <p>Building a home for the first time can feel like a lot. There are approvals, contracts, quotes, trades and hundreds of decisions, and it’s hard to know what comes next. We explain each step in plain language, tell you what decisions are needed and when, and help you understand what things should cost.</p>
+    <ul class="dlist">
+      <li>First-home builders who want an experienced team in their corner</li>
+      <li>Owner-builders who want support without handing over control</li>
+      <li>Help reading quotes, contracts and approval conditions</li>
+      <li>One main contact you can call with any question</li>
+    </ul>
+  </Section>
+
+  <Section num="03" title="Cost-efficient trades and materials">
+    <p>After delivering 100+ homes across Adelaide, we know which trades do good work at a fair price, and where to source quality materials without paying more than you need to. We help you get competitive quotes, choose materials that suit your budget, and avoid the costly mistakes that come from rushing or guessing.</p>
+    <p>Saving money never means cutting corners. Every recommendation is checked by the same engineers and designers who understand your home.</p>
+  </Section>
+
+  <Section num="04" title="How it works" alt>
+    <div class="cards" slot="after">
+      <div class="card">
+        <span class="card-n">01</span>
+        <h3>1. Talk it through</h3>
+        <p>We learn about your project, your budget and how much support you want.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">02</span>
+        <h3>2. Plan and budget</h3>
+        <p>We set out the build stages, timeline and a realistic budget.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">03</span>
+        <h3>3. Trades and materials</h3>
+        <p>We line up reliable trades and source cost-efficient materials.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">04</span>
+        <h3>4. Build and manage</h3>
+        <p>We coordinate the work on site, check quality and keep you updated.</p>
+      </div>
+      <div class="card">
+        <span class="card-n">05</span>
+        <h3>5. Finish and hand over</h3>
+        <p>We wrap up the final inspections and help you move in with confidence.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section num="05" title="Why work with us">
+    <ul class="dlist">
+      <li>100+ homes delivered across Adelaide</li>
+      <li>Engineers and designers in-house, so technical questions get answered fast</li>
+      <li>Licensed SA building work contractor: licence <Licence /></li>
+      <li>{site.engineerCredential ? `Engineering by a Member of Engineers Australia (${site.engineerCredential})` : 'Qualified engineers on every project'}</li>
+    </ul>
+    <div class="actions">
+      <ArrowLink class="tlink" href="/process/">See our full process</ArrowLink>
+      <ArrowLink class="tlink" href="/services/structural-engineering/">Structural engineering</ArrowLink>
+    </div>
+  </Section>
+
+  <Section num="06" title="Frequently asked questions" alt>
+    <div class="faq">
+      <FaqItem question="Can you help if I’m an owner-builder?">
+        <p>Yes. We can guide you through each stage, help you find and coordinate trades, and source materials, while you stay in control of your build.</p>
+      </FaqItem>
+      <FaqItem question="Is project management available on its own?">
+        <p>Yes. You can use project management on its own, or together with our design, engineering and approvals services.</p>
+      </FaqItem>
+      <FaqItem question="How do you help keep costs down?">
+        <p>We compare quotes from trades we trust, help you choose materials that suit your budget, keep costs visible throughout the build and flag changes early, before they become expensive.</p>
+      </FaqItem>
+    </div>
+  </Section>
+
+  <CtaBanner title="Get the support your build needs">
+    <ArrowLink class="btn btn-sand btn-lg" href="/contact/">Talk to us about your build</ArrowLink>
+  </CtaBanner>
+</BaseLayout>

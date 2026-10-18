@@ -53,6 +53,11 @@ export const serviceGroups: (Link & { children: Link[] })[] = [
     children: [],
   },
   {
+    label: 'Project Management',
+    href: '/services/project-management/',
+    children: [],
+  },
+  {
     label: 'Interior Design',
     href: '/services/interior-design/',
     children: [
