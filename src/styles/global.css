@@ -128,6 +128,7 @@ a:hover .arr{transform:translateX(3px)}
 .faq summary i{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--bronze-line);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:18px;transition:all .3s}
 .faq details[open] summary i{transform:rotate(45deg);background:var(--ink);border-color:var(--ink);color:#fff}
 .faq-a{display:flex;flex-direction:column;gap:12px;padding:0 56px 24px 0}
+.faq-text{display:contents}
 .faq-a p{font-size:15.5px;font-weight:300;line-height:1.7;color:#4E5767}
 .cards{margin-top:clamp(32px,3vw,48px);display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:clamp(14px,1.4vw,22px)}
 .card{background:var(--stone-2);padding:28px 28px 30px;display:flex;flex-direction:column;gap:12px}

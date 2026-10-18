@@ -1,12 +1,26 @@
 ---
+// FAQ accordion item. Answers that are final (no placeholders) are marked up as
+// schema.org Question/Answer so search and AI engines can read them; BaseLayout
+// turns the page into an FAQPage when any are present.
 interface Props {
   question: string;
   open?: boolean;
 }
 
 const { question, open = false } = Astro.props;
+const answer = await Astro.slots.render('default');
+const structured = !answer.includes('class="ph"');
 ---
-<details open={open}>
-  <summary><span>{question}</span><i aria-hidden="true">+</i></summary>
-  <div class="faq-a"><slot /></div>
-</details>
+{structured ? (
+  <details open={open} itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <summary><span itemprop="name">{question}</span><i aria-hidden="true">+</i></summary>
+    <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="faq-text" itemprop="text"><Fragment set:html={answer} /></div>
+    </div>
+  </details>
+) : (
+  <details open={open}>
+    <summary><span>{question}</span><i aria-hidden="true">+</i></summary>
+    <div class="faq-a"><Fragment set:html={answer} /></div>
+  </details>
+)}

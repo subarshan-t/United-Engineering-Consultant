@@ -2,15 +2,28 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+import { pageSchema } from '../lib/seo';
 
 interface Props {
   title: string;
   description: string;
   home?: boolean;
+  /** Social share image, relative to the site root. */
+  image?: string;
+  noindex?: boolean;
 }
 
-const { title, description, home = false } = Astro.props;
-const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const { title, description, home = false, image = '/images/og-image.jpg', noindex = false } = Astro.props;
+const origin = Astro.site ?? new URL(Astro.url.origin);
+const path = Astro.url.pathname;
+const canonical = new URL(path, origin).href;
+const imageUrl = new URL(image, origin).href;
+const schema = noindex ? null : pageSchema({ origin, path, title, description, home });
+
+// Render the page first so FAQ answers marked up by FaqItem can make <main> an FAQPage.
+const content = await Astro.slots.render('default');
+const hasFaq = content.includes('itemprop="mainEntity"');
 ---
 <!doctype html>
 <html lang="en-AU">
@@ -19,20 +32,32 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : un
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    {canonical && <link rel="canonical" href={canonical} />}
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    <meta name="theme-color" content="#0B2232" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_AU" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/images/logo-navy.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body class={home ? 'is-home' : 'is-inner'}>
     <Header />
-    <main>
-      <slot />
-    </main>
+    {hasFaq ? (
+      <main itemscope itemtype="https://schema.org/FAQPage"><Fragment set:html={content} /></main>
+    ) : (
+      <main><Fragment set:html={content} /></main>
+    )}
     <Footer />
     <script src="../scripts/main.js"></script>
   </body>

@@ -5,6 +5,18 @@ export const site = {
   phone: '+61 435 338 017' as string | null,
   email: 'admin@unitedengineers.com.au',
   address: '1/41 Douglas Drive, Mawson Lakes, SA 5095',
+  // Structured version of the address for search engines (schema.org PostalAddress).
+  postalAddress: {
+    streetAddress: '1/41 Douglas Drive',
+    addressLocality: 'Mawson Lakes',
+    addressRegion: 'SA',
+    postalCode: '5095',
+    addressCountry: 'AU',
+  },
+  areaServed: ['Adelaide', 'South Australia'],
+  openingHours: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
+  description:
+    'Adelaide engineering and design firm providing residential design, structural and civil engineering, building approvals and construction for homes across South Australia.',
   hours: 'Monday – Friday, 9:00am – 5:00pm',
   hoursShort: 'Mon – Fri, 9:00am – 5:00pm',
   licence: 'BLD 350766' as string | null, // Building Work Contractor's Licence

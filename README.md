@@ -48,7 +48,21 @@ Submissions are sent by [Web3Forms](https://web3forms.com) (free plan, 250 submi
 
 Fields are posted as `name`, `email`, `phone`, `address`, `project_type` and `message`. Replying to the notification email goes to the customer. `botcheck` is a hidden spam trap. File uploads need a paid Web3Forms plan, so the form asks people to email drawings instead.
 
+## SEO, AEO and GEO
+
+Built in, nothing to maintain by hand:
+
+- **Domain:** set once as `site` in `astro.config.mjs`. Canonical URLs, social previews, the sitemap, `robots.txt`, `llms.txt` and structured data all use it.
+- **Sitemap:** `/sitemap-index.xml`, generated on every build.
+- **robots.txt:** allows all search engines and AI crawlers and points to the sitemap.
+- **llms.txt:** a plain-text summary of the business and its key pages for AI assistants, built from `src/data/site.ts` and `src/data/navigation.ts`.
+- **Structured data (JSON-LD):** every page describes the business (address, phone, hours, licence, ABN, MIEAust, services, areas served), plus breadcrumbs. Service pages also describe the service.
+- **FAQ markup:** FAQ answers are marked up as an FAQPage for answer engines. Answers that still contain a placeholder are left out automatically until they're filled in.
+- **Social previews:** Open Graph and Twitter tags use `public/images/og-image.jpg` (1200×630).
+
+After launch: verify the domain in Google Search Console and Bing Webmaster Tools, submit the sitemap, and set up a Google Business Profile with the same name, address and phone as the site.
+
 ## Going live
 
-1. Set `site` in `astro.config.mjs` to the live domain (enables canonical URLs).
+1. Check `site` in `astro.config.mjs` matches the live domain (currently `https://unitedengineers.com.au`).
 2. Run `npm run build` and upload the contents of `dist/` to the host, or connect the repository to Netlify / Vercel / Cloudflare Pages with build command `npm run build` and output directory `dist`.
