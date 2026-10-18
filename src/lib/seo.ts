@@ -32,7 +32,7 @@ export function organisationSchema(origin: URL) {
     '@id': `${url}#organization`,
     name: site.name,
     url,
-    logo: new URL('/images/logo-navy.png', origin).href,
+    logo: new URL('/images/icon-512.png', origin).href,
     image: new URL('/images/og-image.jpg', origin).href,
     description: site.description,
     telephone: site.phone ?? undefined,
