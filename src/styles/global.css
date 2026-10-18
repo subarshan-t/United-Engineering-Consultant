@@ -149,6 +149,10 @@ a:hover .arr{transform:translateX(3px)}
 .img-card{border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;background:var(--stone-2);color:var(--ink)}
 .link-card:hover{background:#ECE8E1;color:var(--ink)}
 .ic-img{height:clamp(160px,13vw,200px);overflow:hidden;border-radius:var(--radius)}
+/* Rounded image frames: clip-path and a rounded <img> keep the corners curved in Safari,
+   which can drop overflow clipping while a child is zoomed or animated. */
+.ic-img,.feat-main{clip-path:inset(0 round var(--radius));isolation:isolate}
+.ic-img img,.feat-main img{border-radius:var(--radius)}
 .ic-img.short{height:clamp(150px,11vw,170px)}
 .ic-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .img-card:hover .ic-img img{transform:scale(1.04)}
