@@ -14,7 +14,10 @@ const projectTypes = [
 ];
 ---
 <div class="form-card">
-  <form class="enquiry" id="enquiry" action="" method="post" enctype="multipart/form-data" data-endpoint={site.formEndpoint} novalidate>
+  <form class="enquiry" id="enquiry" action={site.formEndpoint || undefined} method="post" data-endpoint={site.formEndpoint} novalidate>
+    <input type="hidden" name="access_key" value={site.formAccessKey} />
+    <input type="hidden" name="subject" value={site.formSubject} />
+    <input type="hidden" name="from_name" value={site.name} />
     <div class="fields">
       <label>NAME<input name="name" type="text" autocomplete="name" required /></label>
       <label>EMAIL<input name="email" type="email" autocomplete="email" required /></label>
@@ -30,12 +33,8 @@ const projectTypes = [
       </select>
     </span></label>
     <label>MESSAGE<textarea name="message" rows="4"></textarea></label>
-    <label class="upload">
-      <Icon name="upload" />
-      <span><strong>Upload drawings / photos</strong><small>PDF, JPG or PNG</small><em class="upload-name" data-upload-name></em></span>
-      <input type="file" name="attachments" accept=".pdf,.jpg,.jpeg,.png" multiple />
-    </label>
-    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <p class="form-note"><Icon name="upload" /><span>Have drawings or photos? Email them to <a href={`mailto:${site.email}`}>{site.email}</a> after sending this form.</span></p>
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <p class="form-error" id="form-error" hidden>Please fill in your name, email and phone.</p>
     <button class="btn btn-navy btn-lg btn-block" type="submit">Request a Quote <span class="arr" aria-hidden="true">→</span></button>
   </form>

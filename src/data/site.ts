@@ -11,9 +11,12 @@ export const site = {
   abn: '73 683 735 328' as string | null,
   engineerCredential: 'MIEAust' as string | null,
 
-  // Form service URL for the enquiry form, e.g. 'https://formspree.io/f/YOUR_FORM_ID'.
-  // While empty, the form validates and shows the thank-you message but sends nothing.
-  formEndpoint: '',
+  // Enquiry form is delivered by Web3Forms (https://web3forms.com) to the email the access key
+  // was created with. The access key is designed to be public. If formEndpoint is empty, the
+  // form validates and shows the thank-you message but sends nothing.
+  formEndpoint: 'https://api.web3forms.com/submit',
+  formAccessKey: 'e7156c42-84dc-447f-bf25-c03965d5618a',
+  formSubject: 'New website enquiry',
 };
 
 export const placeholders = {

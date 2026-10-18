@@ -44,9 +44,9 @@ The home page hero plays `public/videos/hero.mp4` (muted, looping) behind the na
 
 ## Enquiry form
 
-Set `formEndpoint` in `src/data/site.ts` to a form service URL (Formspree, Basin, Getform), e.g. `https://formspree.io/f/YOUR_FORM_ID`. Until it's set, the form validates and shows the thank-you message but sends nothing.
+Submissions are sent by [Web3Forms](https://web3forms.com) (free plan, 250 submissions a month) to the email address the access key was created with. The settings are `formEndpoint`, `formAccessKey` and `formSubject` in `src/data/site.ts`. The access key is designed to be public, so it's fine in the site's code. To send to a different inbox, create a new access key at web3forms.com and replace it.
 
-Fields are posted as `name`, `email`, `phone`, `address`, `project_type`, `message` and `attachments` (file upload, which needs a form plan that supports attachments). `_gotcha` is a honeypot spam trap.
+Fields are posted as `name`, `email`, `phone`, `address`, `project_type` and `message`. Replying to the notification email goes to the customer. `botcheck` is a hidden spam trap. File uploads need a paid Web3Forms plan, so the form asks people to email drawings instead.
 
 ## Going live
 

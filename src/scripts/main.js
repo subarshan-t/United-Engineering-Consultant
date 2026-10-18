@@ -31,14 +31,6 @@
     heroVideo.pause();
   }
 
-  // File upload label
-  document.querySelectorAll('.upload input[type=file]').forEach(function (inp) {
-    inp.addEventListener('change', function () {
-      var out = inp.parentNode.querySelector('[data-upload-name]');
-      if (out) out.textContent = Array.prototype.map.call(inp.files, function (f) { return f.name; }).join(', ');
-    });
-  });
-
   // Enquiry form
   // The form posts to data-endpoint, set from formEndpoint in src/data/site.ts.
   // While it's empty, the form validates and shows the thank-you message without sending.
@@ -57,7 +49,7 @@
       if (!endpoint) { done(); return; }
       btn.disabled = true;
       fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(function (r) { if (!r.ok) throw new Error('Send failed'); done(); })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (data) { if (!r.ok || data.success === false) throw new Error('Send failed'); done(); }); })
         .catch(function () { err.textContent = 'Sorry, something went wrong. Please try again or call us.'; err.hidden = false; btn.disabled = false; });
     });
   }
