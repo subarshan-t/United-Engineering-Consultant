@@ -250,17 +250,35 @@ a:hover .arr{transform:translateX(3px)}
   .how{grid-template-columns:repeat(3,minmax(0,1fr))}
   .how::before{display:none}
 }
+@media (max-width:1240px){
+  /* Hero text overlaps the media below desktop widths, so go full-bleed with the darker overlay */
+  .hero-img,.page-hero .hero-img{left:0;-webkit-mask-image:none;mask-image:none}
+  .hero-mob{display:block}
+}
 @media (max-width:760px){
   .header-cta{display:none}
   .burger{margin-left:auto!important}
-  .hero-img,.page-hero .hero-img{left:0;-webkit-mask-image:none;mask-image:none}
-  .hero-mob{display:block}
   .sec-grid,.why,.proj,.contact-grid,.fields{grid-template-columns:1fr}
   .img-cards.c4,.img-cards.c3{grid-template-columns:1fr}
   .how{grid-template-columns:repeat(2,minmax(0,1fr))}
   .why-img{min-height:300px}
   .cta-img{width:100%}
   .faq-a{padding-right:0}
+}
+/* Comfortable touch targets for text links on phones and touchscreens */
+@media (max-width:760px),(pointer:coarse){
+  .tlink{min-height:44px}
+  .card-links a{min-height:44px;padding:10px 0 4px}
+  .cb-list a{padding:10px 0}
+}
+@media (max-width:400px){
+  /* Keep logo and menu button on one line on small phones (e.g. 320px) */
+  .bar{gap:12px}
+  .brand{gap:10px}
+  .brand img{width:34px}
+  .brand .n1{font-size:13.5px;letter-spacing:.06em}
+  .brand .n2{font-size:8.5px;letter-spacing:.36em}
+  .burger{width:44px;height:44px}
 }
 @media (max-width:460px){
   .trust-grid{grid-template-columns:1fr}
