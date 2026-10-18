@@ -1,9 +1,12 @@
 ---
 import Brand from './Brand.astro';
+import Icon from './Icon.astro';
+import { site } from '../data/site';
 import { mainNav, serviceGroups } from '../data/navigation';
 import { isActive } from '../lib/paths';
 
 const path = Astro.url.pathname;
+const tel = site.phone ? `tel:${site.phone.replace(/\s+/g, '')}` : null;
 ---
 <header class="site-header" id="site-header">
   <div class="wrap bar">
@@ -14,6 +17,7 @@ const path = Astro.url.pathname;
       ))}
     </nav>
     <a class="btn btn-sand header-cta" href="/contact/">Request a Quote <span class="arr" aria-hidden="true">→</span></a>
+    {tel && <a class="call-btn" href={tel} aria-label={`Call us on ${site.phone}`}><Icon name="phone" /></a>}
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div class="mega" id="mega">
@@ -38,4 +42,5 @@ const path = Astro.url.pathname;
     ))}
   </nav>
   <a class="btn btn-sand mm-cta" href="/contact/">Request a Quote <span class="arr" aria-hidden="true">→</span></a>
+  {tel && <a class="btn btn-outline-light mm-call" href={tel}><Icon name="phone" /> Call {site.phone}</a>}
 </div>

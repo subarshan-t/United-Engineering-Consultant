@@ -1,5 +1,6 @@
 ---
 import Brand from './Brand.astro';
+import Icon from './Icon.astro';
 import Placeholder from './Placeholder.astro';
 import Licence from './Licence.astro';
 import { serviceGroups, projectLinks } from '../data/navigation';
@@ -25,7 +26,7 @@ const year = new Date().getFullYear();
       </div>
       <div class="f-col">
         <span class="f-h">CONTACT</span>
-        {site.phone ? <a href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a> : <span><Placeholder>{placeholders.phone}</Placeholder></span>}
+        {site.phone ? <a class="f-tel" href={`tel:${site.phone.replace(/\s+/g, '')}`}><Icon name="phone" />{site.phone}</a> : <span><Placeholder>{placeholders.phone}</Placeholder></span>}
         <a href={`mailto:${site.email}`}>{site.email}</a>
         <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`} target="_blank" rel="noopener">{site.address}</a>
         <span>{site.hoursShort}</span>
