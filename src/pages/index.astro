@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactBlock from '../components/ContactBlock.astro';
+import Picture from '../components/Picture.astro';
 import ReviewCard from '../components/ReviewCard.astro';
 import { reviews } from '../data/reviews';
 import { site } from '../data/site';
@@ -15,7 +16,7 @@ import Licence from '../components/Licence.astro';
 >
   <section class="hero">
     <div class="hero-img">
-      <video autoplay muted loop playsinline preload="auto" poster="/images/hero-poster.jpg" aria-hidden="true" data-hero-video>
+      <video autoplay muted loop playsinline preload="auto" poster="/images/hero-poster.webp" aria-hidden="true" data-hero-video>
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
     </div>
@@ -65,7 +66,7 @@ import Licence from '../components/Licence.astro';
       </div>
       <div class="svc4">
         <a class="svc-card" href="/services/residential-design/">
-          <div class="ic-img"><img src="/images/home-timber-clad-mountains.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/home-timber-clad-mountains.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="svc-body">
             <h3><Icon name="home" /><span>Residential Design</span></h3>
             <ul>
@@ -79,7 +80,7 @@ import Licence from '../components/Licence.astro';
           </div>
         </a>
         <a class="svc-card" href="/services/structural-engineering/">
-          <div class="ic-img"><img src="/images/construction-timber-frame-glazing.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/construction-timber-frame-glazing.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="svc-body">
             <h3><Icon name="gear" /><span>Structural Engineering</span></h3>
             <ul>
@@ -94,7 +95,7 @@ import Licence from '../components/Licence.astro';
           </div>
         </a>
         <a class="svc-card" href="/services/structural-engineering/site-drainage-plans/">
-          <div class="ic-img"><img src="/images/construction-split-level-concrete.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/construction-split-level-concrete.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="svc-body">
             <h3><Icon name="bridge" /><span>Civil Engineering</span></h3>
             <ul>
@@ -108,7 +109,7 @@ import Licence from '../components/Licence.astro';
           </div>
         </a>
         <a class="svc-card" href="/services/planning-approvals/">
-          <div class="ic-img"><img src="/images/construction-two-storey-render.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/construction-two-storey-render.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="svc-body">
             <h3><Icon name="document" /><span>Approvals &amp; Documentation</span></h3>
             <ul>
@@ -131,7 +132,7 @@ import Licence from '../components/Licence.astro';
       <h2 class="serif h2-lg">What would you like to build?</h2>
       <div class="img-cards c4">
         <div class="img-card">
-          <div class="ic-img"><img src="/images/home-two-storey-timber.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/home-two-storey-timber.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="ic-body">
             <h3>A new home or knockdown rebuild</h3>
             <p>Whether you’ve got a vacant block or an old house that’s past its best, we’ll design a home that fits your land, your budget and the way you live.</p>
@@ -142,7 +143,7 @@ import Licence from '../components/Licence.astro';
           </div>
         </div>
         <div class="img-card">
-          <div class="ic-img"><img src="/images/interior-open-plan-extension.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/interior-open-plan-extension.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="ic-body">
             <h3>A renovation or extension</h3>
             <p>More space, more light, a better layout. We’ll design and engineer changes that work with your existing home and handle the approvals too.</p>
@@ -152,7 +153,7 @@ import Licence from '../components/Licence.astro';
           </div>
         </div>
         <div class="img-card">
-          <div class="ic-img"><img src="/images/construction-timber-frame-upper.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/construction-timber-frame-upper.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="ic-body">
             <h3>A granny flat or small development</h3>
             <p>Adding a secondary dwelling or splitting your block? We’ll show you what your land can do, then design, approve and build it.</p>
@@ -163,7 +164,7 @@ import Licence from '../components/Licence.astro';
           </div>
         </div>
         <div class="img-card">
-          <div class="ic-img"><img src="/images/construction-two-storey-brick.jpg" alt="" loading="lazy" /></div>
+          <div class="ic-img"><Picture src="/images/construction-two-storey-brick.jpg" sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 25vw" /></div>
           <div class="ic-body">
             <h3>Plans and engineering only</h3>
             <p>Already have a builder? Builders, owner-builders and developers can use our design, drafting and engineering services on their own.</p>
@@ -226,7 +227,7 @@ import Licence from '../components/Licence.astro';
         </li>
       </ol>
     </div>
-    <div class="why-img"><img src="/images/home-contemporary-pool.jpg" alt="" loading="lazy" /></div>
+    <div class="why-img"><Picture src="/images/home-contemporary-pool.jpg" sizes="(max-width: 760px) 100vw, 45vw" /></div>
   </section>
 
   <section class="sec">
@@ -284,8 +285,8 @@ import Licence from '../components/Licence.astro';
       </div>
       <div class="feat">
         <div class="feat-media">
-          <div class="feat-main"><img src="/images/home-single-storey-glass.jpg" alt="Contemporary single-storey home with glass walls" loading="lazy" /></div>
-          <div class="feat-thumbs"><img src="/images/interior-open-plan-extension.jpg" alt="" loading="lazy" /><img src="/images/interior-living-sliding-doors.jpg" alt="" loading="lazy" /><img src="/images/interior-timber-beams-stair.jpg" alt="" loading="lazy" /></div>
+          <div class="feat-main"><Picture src="/images/home-single-storey-glass.jpg" sizes="(max-width: 760px) 100vw, 55vw" /></div>
+          <div class="feat-thumbs"><Picture src="/images/interior-open-plan-extension.jpg" sizes="(max-width: 760px) 33vw, 18vw" /><Picture src="/images/interior-living-sliding-doors.jpg" sizes="(max-width: 760px) 33vw, 18vw" /><Picture src="/images/interior-timber-beams-stair.jpg" sizes="(max-width: 760px) 33vw, 18vw" /></div>
         </div>
         <div class="feat-body">
           <span class="cs-badge">Coming soon</span>

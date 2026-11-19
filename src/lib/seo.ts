@@ -46,6 +46,8 @@ export function organisationSchema(origin: URL) {
       closes: openingHours.closes,
     },
     taxID: site.abn ? `ABN ${site.abn}` : undefined,
+    memberOf: site.memberships.map((name) => ({ '@type': 'Organization', name })),
+    slogan: 'Engineering & design solutions for South Australian homes',
     hasCredential: [
       site.licence && { '@type': 'EducationalOccupationalCredential', name: `Building Work Contractor’s Licence ${site.licence}`, credentialCategory: 'license' },
       site.engineerCredential && { '@type': 'EducationalOccupationalCredential', name: 'Member of Engineers Australia (MIEAust)', credentialCategory: 'Professional membership' },

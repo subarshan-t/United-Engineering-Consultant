@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import ArrowLink from '../components/ArrowLink.astro';
 import ContactBlock from '../components/ContactBlock.astro';
 import Licence from '../components/Licence.astro';
 import { site } from '../data/site';
@@ -35,6 +36,7 @@ import { site } from '../data/site';
           <li><span>02</span>We’ll book a time for your initial consultation</li>
           <li><span>03</span>We’ll talk through your ideas, site and budget, and recommend the next steps</li>
         </ol>
+        <div class="actions"><ArrowLink class="tlink" href="/faqs/">Have a question first? Read our FAQs</ArrowLink></div>
         <p class="lic">Building Work Contractor’s Licence <Licence /></p>
       </div>
     </div>

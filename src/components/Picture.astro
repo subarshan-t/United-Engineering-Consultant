@@ -1,0 +1,32 @@
+---
+// Responsive photo: serves WebP (with a phone-sized version) and falls back to the JPG.
+// Alt text and dimensions come from src/data/images.ts unless given here.
+import { imageInfo } from '../data/images';
+
+interface Props {
+  src: string; // e.g. '/images/home-two-storey-timber.jpg'
+  alt?: string;
+  sizes?: string;
+  priority?: boolean; // above the fold: load straight away
+  class?: string;
+}
+
+const { src, alt, sizes = '100vw', priority = false, class: className } = Astro.props;
+const info = imageInfo(src);
+const base = `/images/${info.name}`;
+const hasSmall = (info.width ?? 0) > 900;
+const srcset = hasSmall ? `${base}-800.webp 800w, ${base}.webp ${info.width}w` : `${base}.webp`;
+---
+<picture>
+  <source type="image/webp" srcset={srcset} sizes={sizes} />
+  <img
+    src={src}
+    alt={alt ?? info.alt}
+    width={info.width}
+    height={info.height}
+    class={className}
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : undefined}
+    decoding="async"
+  />
+</picture>

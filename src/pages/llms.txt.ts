@@ -25,6 +25,10 @@ ${site.name} designs, engineers, gets council approval for and builds homes in A
 
 ${facts.map((f) => `- ${f}`).join('\n')}
 
+## Key facts
+
+${site.keyFacts.map((f) => `- ${f}`).join('\n')}
+
 ## Services
 
 ${serviceGroups

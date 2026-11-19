@@ -32,7 +32,9 @@ The file path in `src/pages/` is the URL: for example `src/pages/services/plans/
 
 ## Replacing images
 
-Images in `public/images/` are named by what they show (`home-…`, `interior-…`, `construction-…`). Replace a file with one of the same name to swap it everywhere it's used, or add a new file and point a page's `image="/images/..."` prop at it. Keep photos around 1280–1600px wide and saved as JPG (quality ~80) so pages stay fast.
+Images in `public/images/` are named by what they show (`home-…`, `interior-…`, `construction-…`). Each photo has three files: the `.jpg` original, a `.webp` version and an `-800.webp` version for phones. The `Picture` component serves the WebP that suits the screen and falls back to the JPG.
+
+To add or replace a photo: save the JPG (around 1280–1600px wide, quality ~80), create the two WebP files (e.g. with Squoosh or `cwebp -q 78`), and add or update its entry in `src/data/images.ts` with its width, height and a short description (the alt text Google and screen readers use).
 
 The default image for the call-to-action banner at the bottom of pages is set in `src/components/CtaBanner.astro`.
 
@@ -74,6 +76,8 @@ Built in, nothing to maintain by hand:
 - **Structured data (JSON-LD):** every page describes the business (address, phone, hours, licence, ABN, MIEAust, services, areas served), plus breadcrumbs. Service pages also describe the service.
 - **FAQ markup:** FAQ answers are marked up as an FAQPage for answer engines. Answers that still contain a placeholder are left out automatically until they're filled in.
 - **Social previews:** Open Graph and Twitter tags use `public/images/og-image.jpg` (1200×630).
+- **Key facts for AI assistants:** `keyFacts` in `src/data/site.ts` feeds llms.txt (free consultation, rates, timeframes, contract, maintenance period). Keep it in step with the page copy.
+- **Images:** every photo has a descriptive alt text and fixed dimensions (no layout shift), and loads as WebP; page header photos load first.
 
 After launch: verify the domain in Google Search Console and Bing Webmaster Tools, submit the sitemap, and set up a Google Business Profile with the same name, address and phone as the site.
 

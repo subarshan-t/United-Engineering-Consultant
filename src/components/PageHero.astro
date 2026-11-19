@@ -1,6 +1,7 @@
 ---
 import { tabs as tabGroups, type TabGroup, type Link } from '../data/navigation';
 import { isCurrent } from '../lib/paths';
+import Picture from './Picture.astro';
 
 interface Props {
   title: string;
@@ -13,12 +14,12 @@ interface Props {
   tabs?: TabGroup;
 }
 
-const { title, image, imageAlt = '', crumbs = [], crumb, tabs } = Astro.props;
+const { title, image, imageAlt, crumbs = [], crumb, tabs } = Astro.props;
 const path = Astro.url.pathname;
 const tabLinks = tabs ? tabGroups[tabs] : [];
 ---
 <section class="page-hero">
-  <div class="hero-img"><img src={image} alt={imageAlt} /></div>
+  <div class="hero-img"><Picture src={image} alt={imageAlt} sizes="(max-width: 1024px) 100vw, 60vw" priority /></div>
   <div class="hero-shade"></div>
   <div class="hero-mob"></div>
   <div class="wrap hero-inner">
