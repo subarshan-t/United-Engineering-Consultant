@@ -1,0 +1,19 @@
+---
+// Friendly stand-in for content that's on its way (e.g. project galleries).
+// Replace the <ComingSoon> tag with the real content once it's ready.
+import ArrowLink from './ArrowLink.astro';
+
+interface Props {
+  title: string;
+  cta?: string;
+  href?: string;
+}
+
+const { title, cta = 'Talk to us about your project', href = '/contact/' } = Astro.props;
+---
+<div class="coming-soon">
+  <span class="cs-badge">Coming soon</span>
+  <h3>{title}</h3>
+  <p><slot /></p>
+  <ArrowLink class="btn btn-navy" href={href}>{cta}</ArrowLink>
+</div>

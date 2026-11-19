@@ -323,6 +323,14 @@ a:hover .arr{transform:translateX(3px)}
 .why-link{color:var(--sand);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 .why-link:hover{color:#fff}
 
+/* Coming soon panels (galleries, featured project) */
+.cs-badge{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--sand);color:var(--bronze);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.coming-soon{margin-top:clamp(28px,3vw,44px);display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:clamp(28px,3.4vw,48px);border-radius:var(--radius);background:#fff;border:1px solid var(--rule-2)}
+.sec:not(.alt) .coming-soon{background:var(--stone)}
+.coming-soon h3{font-family:var(--display);font-size:clamp(22px,2vw,28px);line-height:1.2}
+.coming-soon p{max-width:640px;font-size:15.5px;line-height:1.7;color:var(--body)}
+.coming-soon .btn{margin-top:6px}
+
 /* Kicker separators */
 .kicker i{font-style:normal;opacity:.5;margin:0 .35em}
 

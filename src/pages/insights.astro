@@ -2,9 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import Section from '../components/Section.astro';
+import ComingSoon from '../components/ComingSoon.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import ArrowLink from '../components/ArrowLink.astro';
-import Placeholder from '../components/Placeholder.astro';
 ---
 <BaseLayout
   title="Home Building & Approval Insights Adelaide | UEC"
@@ -31,7 +31,7 @@ import Placeholder from '../components/Placeholder.astro';
   </Section>
 
   <Section num="02" title="Latest articles" alt>
-    <p><Placeholder>[ARTICLE LISTING: pulls in the latest posts automatically.]</Placeholder></p>
+    <ComingSoon title="Articles on their way" cta="Ask us a question" slot="after">We’re writing practical guides on designing, engineering, approving and building homes in South Australia. Check back soon.</ComingSoon>
   </Section>
 
   <Section num="03" title="Stay in the loop">

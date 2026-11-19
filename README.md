@@ -53,7 +53,8 @@ Visitors with "reduce motion" turned on get no animation, and if the script fail
 
 ## Placeholders
 
-- Copy that still needs client input is wrapped in `<Placeholder>…</Placeholder>` (highlighted on the page). Replace the whole tag with the final text.
+- Content that's on its way (project galleries, the home page featured project) shows a "Coming soon" panel (`<ComingSoon>` in `src/components/ComingSoon.astro`). Replace the tag with the real content once it's ready.
+- `<Placeholder>…</Placeholder>` highlights copy that still needs client input. None is left on the site; use it while drafting new copy.
 - The phone number, licence number, ABN and engineer credential are set once in `src/data/site.ts`. Fill those in and they update everywhere, including the footer, contact sections and FAQs.
 
 ## Enquiry form
