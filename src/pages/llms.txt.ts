@@ -43,7 +43,6 @@ ${tabs.process.map((p) => link(p.label === 'Overview' ? 'Our process' : p.label,
 
 ${link('About', '/about/')}
 ${link('FAQs', '/faqs/')}
-${link('Insights', '/insights/')}
 ${link('Contact and quotes', '/contact/')}
 `;
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

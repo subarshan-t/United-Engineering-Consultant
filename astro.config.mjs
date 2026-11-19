@@ -7,5 +7,6 @@ export default defineConfig({
   // The live domain. Used for canonical URLs, the sitemap, robots.txt, llms.txt and structured data.
   site: 'https://unitedengineers.com.au',
   trailingSlash: 'always',
-  integrations: [sitemap({ filter: (page) => !page.includes('/404') })],
+  // Insights is hidden until articles are published.
+  integrations: [sitemap({ filter: (page) => !page.includes('/404') && !page.includes('/insights/') })],
 });

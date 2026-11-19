@@ -9,7 +9,9 @@ export const mainNav: (Link & { mega?: boolean })[] = [
   { label: 'Projects', href: '/projects/' },
   { label: 'Process', href: '/process/' },
   { label: 'About', href: '/about/' },
-  { label: 'Insights', href: '/insights/' },
+  // Insights is hidden until there are articles to publish. To bring it back, restore this line
+  // and remove noindex from src/pages/insights.astro and the filter in astro.config.mjs:
+  // { label: 'Insights', href: '/insights/' },
   { label: 'FAQs', href: '/faqs/' },
   { label: 'Contact', href: '/contact/' },
 ];
